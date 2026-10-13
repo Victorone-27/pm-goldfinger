@@ -12,3 +12,6 @@ __pycache__/
 /agents/competitor-weekly/reports/*
 !/agents/competitor-weekly/reports/.gitkeep
 !/agents/competitor-weekly/reports/examples/
+
+# Local rea runtime, dependencies, and isolated browser profiles
+/.local/rea/

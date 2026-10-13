@@ -6,11 +6,11 @@ An AI toolkit for product managers, built around traceable examples and practica
 
 ## 当前状态
 
-M0、M1、M2、M4 已通过。产品拆解已补充“30 秒速读”；三例为宜家中国、秘塔 AI 搜索、少数派。M3 小红书口碑暂缓，等用户准备账号；M4.5 第一步 [rea 学习笔记](docs/rea-study.md)已完成，待用户确认，接入与截图改版尚未开始。
+M0、M1、M2、M4 已通过。产品拆解已补充“30 秒速读”；三例为宜家中国、秘塔 AI 搜索、少数派。M3 小红书口碑暂缓，等用户准备账号。M4.5 的 [rea 学习笔记](docs/rea-study.md)已通过，项目内安装与[宜家单页技术透视试点](docs/rea/ikea-pilot/report.md)已完成，待用户验收；另两例的技术透视及通用流程/模板扩展尚未开始。截图改版待 M5。
 
 | 工具 | 用途 | 状态 |
 | --- | --- | --- |
-| [产品拆解](skills/teardown/) | 从公开网页或截图生成有依据的产品分析 | M4 已通过 · 含 30 秒速读；M4.5 学习笔记待确认 |
+| [产品拆解](skills/teardown/) | 从公开网页或截图生成有依据的产品分析 | M4 已通过 · 含 30 秒速读；M4.5 宜家技术透视试点待验收 |
 | [截图改版](skills/redesign/) | 从体验问题形成改前、改后可点击原型 | 开发中 · M5 |
 | [说人话](skills/plain-talk/) | 面向老板、HR 和研发改写，保持事实与口径 | M2 已通过 |
 | [竞品周报](agents/competitor-weekly/) | 对比 App Store 更新，后续增加小红书口碑变化 | M1 已通过；M3 暂缓，等用户准备账号 |
@@ -74,11 +74,17 @@ bash scripts/install_skills.sh --uninstall
 
 [流程与自检](skills/teardown/SKILL.md) · [M4 验证记录](docs/m4-validation.md)。这里的建议是待验证的方案，不是已取得的产品效果。
 
+技术透视正在试点：[宜家首页报告](docs/rea/ikea-pilot/report.md)将页面现象与加载脚本、观察窗口内的请求关联，并明确哪些服务或调用方式尚未确认。rea 6.4.0 使用项目内独立 Node 24.21.0，系统默认 Node 25 保留；[安装与验证记录](docs/rea-installation.md)说明 MCP 配置、独立浏览器及清理结果，也记录一次通用窗口选择器误读日常窗口的偏差。当前 MCP 直接协议调用已通过，Codex 当前会话原生重连尚未验证。此依赖不由 Skill 安装脚本自动安装。
+
 ## 开发顺序
 
 当前顺序：M0 仓库骨架 → M1 App Store 周报 → M2 说人话（含 Skill 安装脚本）→ M4 产品拆解 → M4.5 技术透视 → M5 截图改版 → M6 演示素材与 README → M7 作品集网页和 BOSS 长图。M3 小红书口碑暂缓，等用户准备好账号后再安排；原始 TASKS.md 保留不改。
 
 每个里程碑单独进行本地提交，按[任务书第 6 节](TASKS.md#6-验收报告格式每个里程碑结束时交给我)交验收报告，确认通过后再开始下一个里程碑。
+
+## 致谢
+
+[rea（Reverse Engineer Anything）](https://github.com/morluto/rea)为本项目技术透视提供网站观察能力与证据组织方法。上游采用 [MIT 许可证](https://github.com/morluto/rea/blob/a56f7bb668ab23fec8d33f7af353ac7ed2fe1895/LICENSE)，`Copyright (c) 2026 morluto`；安装包保留原版权与许可证。本阶段调用依赖、参考方法，没有复制其实现代码到本仓库。[学习笔记](docs/rea-study.md)记录取舍。
 
 ## 许可证
 

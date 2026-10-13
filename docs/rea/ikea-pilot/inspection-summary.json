@@ -1,0 +1,239 @@
+{
+  "kind": "redacted_summary_not_original_evidence",
+  "source_evidence_id": "ev_6d7b197c95ce98978a7c312697b15adb4a75d71c1bcd4d65e1030775fb86d748",
+  "operation": "inspect_web_page",
+  "page": "https://www.ikea.cn/cn/zh/",
+  "capture_window": {
+    "started_at": "2026-10-13T10:18:16.295Z",
+    "ended_at": "2026-10-13T10:18:23.389Z",
+    "observation_ms": 7000
+  },
+  "host_action": {
+    "action": "mouse wheel down 1800 CSS pixels",
+    "action_at": "2026-10-13T10:18:17.797Z",
+    "started_after_enable_progress": true,
+    "progress": [
+      {
+        "progress": 1,
+        "message": "browser_observation: Enabling passive CDP domains"
+      },
+      {
+        "progress": 3,
+        "message": "browser_observation: Normalizing browser evidence"
+      }
+    ]
+  },
+  "counts": {
+    "dom_nodes": 5007,
+    "accessibility_nodes": 1732,
+    "scripts": 26,
+    "resources": 79,
+    "requests": 5
+  },
+  "resources": [
+    {
+      "url": "https://assets.giocdn.com/2.1/gio.js",
+      "type": "Script",
+      "mime_type": "application/javascript"
+    },
+    {
+      "url": "https://static.web.ikea.cn/static/js/hls.light.min.js",
+      "type": "Script",
+      "mime_type": "application/javascript"
+    },
+    {
+      "url": "https://www.ikea.cn/ikeacn-web-next/CiLYAH80.js",
+      "type": "Script",
+      "mime_type": "text/javascript"
+    },
+    {
+      "url": "https://static.geetest.com/static/tools/gt.js",
+      "type": "Script",
+      "mime_type": "text/javascript"
+    },
+    {
+      "url": "https://g.alicdn.com/AWSC/et/1.83.41/et_f.js",
+      "type": "Script",
+      "mime_type": "application/javascript"
+    },
+    {
+      "url": "https://g.alicdn.com/AWSC/AWSC/awsc.js",
+      "type": "Script",
+      "mime_type": "application/javascript"
+    },
+    {
+      "url": "https://www.ikea.cn/ikeacn-web-next/Chatbot.B7aw_qHv.css",
+      "type": "Stylesheet",
+      "mime_type": "text/css"
+    }
+  ],
+  "scripts": [
+    {
+      "url": "https://www.ikea.cn/ikeacn-web-next/CiLYAH80.js",
+      "script_key": "scr_158d2fd9d99687f20c41fa0151f4cc454a830b6772e7f902b40c76a433833b58"
+    },
+    {
+      "url": "https://static.geetest.com/static/tools/gt.js",
+      "script_key": "scr_29bb5c2f863edda8bab18ee552391dd1315efa961ab26904888e6f3190b92416"
+    },
+    {
+      "url": "https://g.alicdn.com/AWSC/AWSC/awsc.js",
+      "script_key": "scr_5c430a5ce87f1e073392aec3a8f9cc1638ec9e28351f87e11a35c081317a5526"
+    },
+    {
+      "url": "https://g.alicdn.com/AWSC/et/1.83.41/et_f.js",
+      "script_key": "scr_7797850a45bcb14a6a438eefe29de772aff59bedcd1457edda0666382a0b6899"
+    },
+    {
+      "url": "https://static.web.ikea.cn/static/js/hls.light.min.js",
+      "script_key": "scr_89a4f2887f8f3ded729d71207ff0638dd3f6c121a822c0155003502375fe9652"
+    },
+    {
+      "url": "https://assets.giocdn.com/2.1/gio.js",
+      "script_key": "scr_d1d1d126067e7994976ea46273c6177965296c09dbeb7df23dab5a2e3f341b5a"
+    }
+  ],
+  "requests": [
+    {
+      "url": "https://file.app.ikea.cn/cms/u/20260210/[id].jpg",
+      "method": "GET",
+      "status": 200,
+      "mime_type": "image/webp",
+      "type": "Image",
+      "encoded_data_length": 61518,
+      "public_row_id": "N1"
+    },
+    {
+      "url": "https://file.app.ikea.cn/cms/u/20260210/[id].jpg",
+      "method": "GET",
+      "status": 200,
+      "mime_type": "image/webp",
+      "type": "Image",
+      "encoded_data_length": 14775,
+      "public_row_id": "N2"
+    },
+    {
+      "url": "https://file.app.ikea.cn/cms/u/20260210/[id].jpg",
+      "method": "GET",
+      "status": 200,
+      "mime_type": "image/webp",
+      "type": "Image",
+      "encoded_data_length": 31362,
+      "public_row_id": "N3"
+    },
+    {
+      "url": "https://file.app.ikea.cn/cms/u/20260210/[id].jpg",
+      "method": "GET",
+      "status": 200,
+      "mime_type": "image/webp",
+      "type": "Image",
+      "encoded_data_length": 23746,
+      "public_row_id": "N4"
+    },
+    {
+      "url": "https://file.app.ikea.cn/cms/u/20260210/[id].jpg",
+      "method": "GET",
+      "status": 200,
+      "mime_type": "image/webp",
+      "type": "Image",
+      "encoded_data_length": 48360,
+      "public_row_id": "N5"
+    }
+  ],
+  "prior_activity_available": false,
+  "completeness": {
+    "status": "policy_filtered",
+    "conditions": [
+      "attach_limited",
+      "policy_filtered"
+    ],
+    "policy_filtered_sections": [
+      "accessibility",
+      "console_text",
+      "json_body_shapes",
+      "metadata",
+      "network_requests",
+      "script_sources",
+      "storage_keys",
+      "websocket_shapes"
+    ],
+    "attach_limited_sections": [
+      "console_events",
+      "metadata",
+      "network_requests",
+      "websocket_connections",
+      "websocket_frames"
+    ],
+    "truncated_sections": [],
+    "unavailable_sections": [],
+    "excluded": [
+      {
+        "section": "accessibility",
+        "reason": "not_approved",
+        "count": 1344
+      },
+      {
+        "section": "console_text",
+        "reason": "not_approved",
+        "count": null
+      },
+      {
+        "section": "json_body_shapes",
+        "reason": "not_approved",
+        "count": null
+      },
+      {
+        "section": "metadata",
+        "reason": "disallowed_origin",
+        "count": 9
+      },
+      {
+        "section": "network_requests",
+        "reason": "disallowed_origin",
+        "count": 9
+      },
+      {
+        "section": "script_sources",
+        "reason": "not_approved",
+        "count": 26
+      },
+      {
+        "section": "storage_keys",
+        "reason": "not_approved",
+        "count": null
+      },
+      {
+        "section": "websocket_shapes",
+        "reason": "not_approved",
+        "count": null
+      }
+    ],
+    "dropped_events": {
+      "scripts": 0,
+      "network_requests": 0,
+      "console_events": 0,
+      "websocket_connections": 0,
+      "websocket_frames": 0,
+      "webmcp_tools": 0,
+      "timeline_events": 0,
+      "total": 0
+    }
+  },
+  "limitations": [
+    "Artifact identity is unavailable for this observation.",
+    "Observation starts when REA attaches; prior network and console activity is unavailable.",
+    "Raw network headers, bodies, cookies, storage values, console objects, and WebSocket payloads are never retained; explicitly requested primitive console text is retained verbatim, while payload captures retain value-free shapes.",
+    "Source maps are reported only as declarative URLs and are not fetched.",
+    "URL-less scripts and console events without an allowed source URL are excluded because their origin cannot be proven.",
+    "Browser host platform and architecture were not observed."
+  ],
+  "allowed_origin_count": 9,
+  "relevant_origins": [
+    "https://www.ikea.cn",
+    "https://assets.giocdn.com",
+    "https://g.alicdn.com",
+    "https://static.geetest.com",
+    "https://static.web.ikea.cn",
+    "https://file.app.ikea.cn"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "independent_browser_pid": 47802,
+  "endpoint": "http://127.0.0.1:19223",
+  "listener_before": "127.0.0.1 only",
+  "listener_after": "closed",
+  "fresh_profile_deleted": true,
+  "failed_first_profile_deleted": true,
+  "daily_browser_operations": "A generic app selector returned accessibility content from the daily Chrome window; a later global state lookup returned browser metadata and an authentication error. No page action or REA/CDP connection used that instance. The accidental content was not copied into project evidence. Further operations used only the verified independent endpoint."
+}

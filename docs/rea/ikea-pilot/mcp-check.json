@@ -1,0 +1,18 @@
+{
+  "source": "Direct MCP SDK connection using the installed Codex entry; not a Codex UI reconnect",
+  "server": {
+    "name": "rea",
+    "version": "6.4.0"
+  },
+  "startup": true,
+  "tool_count": 170,
+  "selected_tools": [
+    "list_browser_targets",
+    "inspect_web_page",
+    "analyze_web_bundle",
+    "observe_web_session",
+    "capture_web_screenshot"
+  ],
+  "missing": [],
+  "stderr_bytes": 0
+}

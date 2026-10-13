@@ -1,0 +1,50 @@
+[
+  {
+    "file": "../../assets/teardown-technical/ikea-before-cookie.png",
+    "source_evidence_id": "ev_7ba97d82315574c914189f38878b7377fd385d27cc91f2cfc1733c6ed7b05757",
+    "sha256": "fd35c04d7861647d92c56c8c0aafb597de39cd2ca5c1fb7ac622c5bd93390f08",
+    "captured_at": "2026-10-13T09:43:22.572Z",
+    "viewport": {
+      "width": 2400,
+      "height": 1410
+    },
+    "original_sha256": "7194e1735bdb0002b485524998ded1783446ba97bc8150c8ba0b19276dc109ea",
+    "rendition": "attributed_display_copy_not_original_capture",
+    "display_size": [
+      2400,
+      1556
+    ]
+  },
+  {
+    "file": "../../assets/teardown-technical/ikea-home.png",
+    "source_evidence_id": "ev_c7d49a51492cce08e9d5ffff273e6b6cb7f96d9333dcf427a6a061754671aac3",
+    "sha256": "969940607caeab565d1e0db60fdfe78b96100232075145aee2a2947686539667",
+    "captured_at": "2026-10-13T09:54:30.230Z",
+    "viewport": {
+      "width": 2400,
+      "height": 1410
+    },
+    "original_sha256": "d4825fe4c64a6f23cbad845c0b88c6d780eb66da0134f5d494e3521c2278b5ce",
+    "rendition": "attributed_display_copy_not_original_capture",
+    "display_size": [
+      2400,
+      1556
+    ]
+  },
+  {
+    "file": "../../assets/teardown-technical/ikea-scrolled.png",
+    "source_evidence_id": "ev_02f02283401ce66e5af4232ff68bf0a3b938bf7aaf40138fd5a923f69ec82844",
+    "sha256": "d33c9b506afb9427f407e55d657e52a816b3a21f6a818dac0ddb12f8afc8ba16",
+    "captured_at": "2026-10-13T10:18:23.720Z",
+    "viewport": {
+      "width": 2400,
+      "height": 1410
+    },
+    "original_sha256": "42b35b817134bdcc08975a32906a23b8229c7ecd34e7f7102255cf1ba1981f1a",
+    "rendition": "attributed_display_copy_not_original_capture",
+    "display_size": [
+      2400,
+      1556
+    ]
+  }
+]

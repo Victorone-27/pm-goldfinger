@@ -1,0 +1,18 @@
+[
+  {
+    "id": "D1",
+    "accessed_date": "2026-10-13",
+    "title": "GrowingIO：集成最新 SDK",
+    "url": "https://docs.growingio.com/v3/developer-manual/sdkintegrated/web-js-sdk/latest-jssdk",
+    "verified_in_document_body": "安装代码示例含 assets.giocdn.com/2.1/gio.js；正文介绍浏览量、点击量等采集配置。",
+    "limit": "用于确认 SDK 归属，不证明宜家启用的采集范围或实际发送事件；已剔除文档页自身的 script/style 元素后核对正文。"
+  },
+  {
+    "id": "D2",
+    "accessed_date": "2026-10-13",
+    "title": "极验文档中心",
+    "url": "https://docs.geetest.com/index",
+    "verified_in_document_body": "为网站或者应用提供一站式交互安全服务；文档列出行为验证第三代、第四代产品。",
+    "limit": "用于支持厂商用途线索，未核对宜家所加载 gt.js 的具体代际或启用流程。"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-10-13T10:35:04.679683+00:00",
+  "scope": "M4.5 IKEA pilot documentation and persisted evidence; no repeated website or model calls",
+  "checks": {
+    "common_credential_patterns_absent": true,
+    "changed_markdown_local_links_resolve": true,
+    "new_json_parseable": true,
+    "report_request_counts_values_and_capture_order_match": true,
+    "summaries_marked_as_redacted_not_original_evidence": true,
+    "screenshots_match_preserved_hashes": true,
+    "quick_read_three_plain_language_items": true,
+    "tasks_skills_agents_scripts_unchanged": true,
+    "git_diff_check": true,
+    "runtime_ignored_by_git": true
+  },
+  "credential_scan_note": "Common credential patterns checked in Git-tracked and nonignored files; this is not a proof that all possible sensitive content is absent. Screenshots also manually reviewed.",
+  "local_links_checked": 43
+}

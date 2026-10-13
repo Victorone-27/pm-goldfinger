@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-10-13T10:26:25.408277+00:00",
+  "default_node": "v25.8.1",
+  "rea_node": "v24.21.0",
+  "rea_version": "6.4.0",
+  "runtime_location": ".local/rea",
+  "package_lock_sha256": "0ad6e66c5cda04664da82d1197c170312cd7a731fdc3bdac81c2c283c5f01d68",
+  "node_archive_sha256": "bed7eea5325e1108f32ce5228ddd6a5f0f08a499ee42aa7442aea583702f6057",
+  "rea_tarball_sha256": "59eb1604b8db75f522d4a975c36ce6b4a2ad465e43bad165f9a8f728391db9b8",
+  "checks": {
+    "mcp_other_config_unchanged": true,
+    "mcp_matches_reviewed_addition": true,
+    "backup_matches_approved_config": true,
+    "unchanged_.zshrc": true,
+    "unchanged_.zprofile": true,
+    "unchanged_node": true,
+    "approved_app/package.json": true,
+    "approved_app/package-lock.json": true,
+    "approved_rea-agents-6.4.0.tgz": true,
+    "node_archive_verified": true,
+    "port_19222_closed": true,
+    "port_19223_closed": true,
+    "browser_profile_dir_empty": true,
+    "no_independent_browser_process": true,
+    "screenshot_hashes_match": true
+  },
+  "codex_current_chat_native_reconnect": "not_verified"
+}

@@ -1,0 +1,95 @@
+{
+  "kind": "redacted_summary_not_original_evidence",
+  "source_evidence_id": "ev_5fde849fd909d0e0551507bacf97e3f6a4e32b4d378f2e0d4ed19c63e0c6ce84",
+  "same_origin_only": true,
+  "scripts_observed": 21,
+  "scripts_analyzed": 21,
+  "main_script": {
+    "script_key": "scr_158d2fd9d99687f20c41fa0151f4cc454a830b6772e7f902b40c76a433833b58",
+    "url": "https://www.ikea.cn/ikeacn-web-next/CiLYAH80.js",
+    "artifact_sha256": "ba76e71de40d52d22fee6b2488d831ef5a892a6d492b750867f460c1be53092c",
+    "bytes": 2446691
+  },
+  "inferences": [
+    {
+      "kind": "bundle_runtime",
+      "value": "Vite",
+      "confidence": "medium",
+      "basis": [
+        {
+          "script_key": "scr_158d2fd9d99687f20c41fa0151f4cc454a830b6772e7f902b40c76a433833b58",
+          "artifact_sha256": "ba76e71de40d52d22fee6b2488d831ef5a892a6d492b750867f460c1be53092c",
+          "line": null,
+          "column": null,
+          "detector": "vite-runtime"
+        }
+      ]
+    },
+    {
+      "kind": "vendor_fingerprint",
+      "value": "Vue",
+      "confidence": "medium",
+      "basis": [
+        {
+          "script_key": "scr_158d2fd9d99687f20c41fa0151f4cc454a830b6772e7f902b40c76a433833b58",
+          "artifact_sha256": "ba76e71de40d52d22fee6b2488d831ef5a892a6d492b750867f460c1be53092c",
+          "line": null,
+          "column": null,
+          "detector": "vue-runtime"
+        }
+      ]
+    },
+    {
+      "kind": "route_framework",
+      "value": "Generic route registration API",
+      "confidence": "medium",
+      "basis": [
+        {
+          "script_key": "scr_158d2fd9d99687f20c41fa0151f4cc454a830b6772e7f902b40c76a433833b58",
+          "artifact_sha256": "ba76e71de40d52d22fee6b2488d831ef5a892a6d492b750867f460c1be53092c",
+          "line": 23,
+          "column": 18094,
+          "detector": "call:t.addRoute"
+        }
+      ]
+    }
+  ],
+  "selected_endpoint_candidates": [
+    {
+      "value": "/event-tracking-service/api/v1/user-events/zipped",
+      "mechanism": "call:P.post",
+      "location": {
+        "script_key": "scr_158d2fd9d99687f20c41fa0151f4cc454a830b6772e7f902b40c76a433833b58",
+        "line": 698,
+        "column": 122900
+      }
+    },
+    {
+      "value": "/event-tracking-service/api/v1/user",
+      "mechanism": "call:P.post",
+      "location": {
+        "script_key": "scr_158d2fd9d99687f20c41fa0151f4cc454a830b6772e7f902b40c76a433833b58",
+        "line": 698,
+        "column": 123082
+      }
+    }
+  ],
+  "source_maps": {
+    "status": "not_requested",
+    "requested": 0,
+    "processed": 0,
+    "items": []
+  },
+  "completeness": {
+    "status": "complete",
+    "parsed_scripts": 21,
+    "parse_failures": 0,
+    "visited_ast_nodes": 764470
+  },
+  "limitations": [
+    "Static bundle findings are observations or bounded inferences; REA does not execute captured JavaScript.",
+    "String-built routes and endpoints, encrypted configuration, and server-side behavior may remain unknown.",
+    "Page-declared WebMCP metadata is untrusted and is never registered or invoked as an REA tool."
+  ],
+  "interpretation_note": "Endpoint strings are static candidates, not observed HTTP requests; complete means selected scripts parsed, not full website coverage."
+}
