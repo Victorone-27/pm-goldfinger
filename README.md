@@ -6,11 +6,11 @@ An AI toolkit for product managers, built around traceable examples and practica
 
 ## 当前状态
 
-M0、M1、M2 已通过。M4 产品拆解已完成，待用户验收；三例为宜家中国、秘塔 AI 搜索、少数派。M3 小红书口碑暂缓，等用户准备账号；M4.5 技术透视与截图改版尚未开始。
+M0、M1、M2、M4 已通过。产品拆解已补充“30 秒速读”；三例为宜家中国、秘塔 AI 搜索、少数派。M3 小红书口碑暂缓，等用户准备账号；当前进入 M4.5 第一步 rea 研究，接入与截图改版尚未开始。
 
 | 工具 | 用途 | 状态 |
 | --- | --- | --- |
-| [产品拆解](skills/teardown/) | 从公开网页或截图生成有依据的产品分析 | M4 待验收 · 三例含截图证据；M4.5 未开始 |
+| [产品拆解](skills/teardown/) | 从公开网页或截图生成有依据的产品分析 | M4 已通过 · 含 30 秒速读；M4.5 研究中 |
 | [截图改版](skills/redesign/) | 从体验问题形成改前、改后可点击原型 | 开发中 · M5 |
 | [说人话](skills/plain-talk/) | 面向老板、HR 和研发改写，保持事实与口径 | M2 已通过 |
 | [竞品周报](agents/competitor-weekly/) | 对比 App Store 更新，后续增加小红书口碑变化 | M1 已通过；M3 暂缓，等用户准备账号 |
@@ -68,7 +68,7 @@ bash scripts/install_skills.sh --uninstall
 
 > 拆解宜家中国 https://www.ikea.cn/cn/zh/ ，只看未登录的沙发选购路径，重点分析筛选和购买决策。
 
-也可用 `$teardown`（Codex）或 `/teardown`（Claude Code）显式调用。网页由宿主实际浏览并截图；App 需要提供截图或录屏。输出一页摘要，含功能地图、核心路径、商业模式、3 个具体 AI 机会点；提供目标岗位时再加面试准备。每条结论区分截图、公开资料与推断。
+也可用 `$teardown`（Codex）或 `/teardown`（Claude Code）显式调用。网页由宿主实际浏览并截图；App 需要提供截图或录屏。输出先给“30 秒速读”（最好的一点、最大的问题、先改什么），再给一页摘要，含功能地图、核心路径、商业模式、3 个具体 AI 机会点；提供目标岗位时再加面试准备。速读不带来源标记，下方正文每条结论区分截图、公开资料与推断。
 
 真实示例：[宜家中国](skills/teardown/examples/01-ikea.md) · [秘塔 AI 搜索](skills/teardown/examples/02-metaso.md) · [少数派](skills/teardown/examples/03-sspai.md)；[逐项证据与截图](skills/teardown/examples/sources.md)。少数派单列 PRIME 入口与免费/付费边界。功能使用宿主能力，不新增模型 API、账号或依赖；遇核心登录阻塞就停下说明。
 
