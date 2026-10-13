@@ -4,6 +4,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[2]
 INSTALLER = REPO / "scripts/install_skills.sh"
 SOURCE = REPO / "skills/plain-talk"
+TEARDOWN = REPO / "skills/teardown"
 
 
 def run(tmp_path, *args, answer=None):
@@ -16,7 +17,7 @@ def run(tmp_path, *args, answer=None):
 
 def test_preview_and_cancel_do_not_write(tmp_path):
     preview = run(tmp_path, "--dry-run")
-    assert preview.returncode == 0 and "plain-talk" in preview.stdout
+    assert preview.returncode == 0 and "plain-talk" in preview.stdout and "teardown" in preview.stdout
     assert "跳过未完成" in preview.stdout
     assert not list(tmp_path.iterdir())
     cancelled = run(tmp_path, answer="n\n")
@@ -26,19 +27,24 @@ def test_preview_and_cancel_do_not_write(tmp_path):
 
 def test_install_is_repeatable_and_uninstall_preserves_source_and_unrelated_skill(tmp_path):
     original = (SOURCE / "SKILL.md").read_bytes()
+    teardown_original = (TEARDOWN / "SKILL.md").read_bytes()
     installed = run(tmp_path, answer="y\n")
     assert installed.returncode == 0, installed.stderr
     for host in ("Codex skills", "Claude skills"):
         link = tmp_path / host / "plain-talk"
         assert link.is_symlink() and link.resolve() == SOURCE
-        assert not (tmp_path / host / "teardown").exists()
+        teardown_link = tmp_path / host / "teardown"
+        assert teardown_link.is_symlink() and teardown_link.resolve() == TEARDOWN
+        assert not (tmp_path / host / "redesign").exists()
         (tmp_path / host / "other-skill").mkdir()
     assert run(tmp_path, "--yes").returncode == 0
     assert run(tmp_path, "--uninstall", "--yes").returncode == 0
     for host in ("Codex skills", "Claude skills"):
         assert not (tmp_path / host / "plain-talk").is_symlink()
+        assert not (tmp_path / host / "teardown").is_symlink()
         assert (tmp_path / host / "other-skill").is_dir()
     assert (SOURCE / "SKILL.md").read_bytes() == original
+    assert (TEARDOWN / "SKILL.md").read_bytes() == teardown_original
 
 
 def test_conflict_is_detected_before_any_other_target_is_changed(tmp_path):
@@ -68,4 +74,5 @@ def test_target_and_skill_selection(tmp_path):
     assert result.returncode == 0, result.stderr
     assert (tmp_path / "Codex skills/plain-talk").is_symlink()
     assert not (tmp_path / "Claude skills").exists()
-    assert run(tmp_path, "--skill", "teardown", "--yes").returncode == 1
+    assert not (tmp_path / "Codex skills/teardown").exists()
+    assert run(tmp_path, "--skill", "redesign", "--yes").returncode == 1
