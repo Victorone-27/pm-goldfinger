@@ -1,6 +1,18 @@
 # 演示素材与来源
 
-M6，2026-10-13。以下为当前交付版本；对外展示使用这一版，替代 M5 旧配图版本。HTML 为可编辑源页，PNG 为浏览器实际渲染后导出的效果图。
+2026-10-13。M6 完成四工具与改版素材；M7 更新说人话老板版图片，并新增作品集网页与长图。以下为当前交付版本，对外展示替代旧配图版本。HTML 为可编辑源页，PNG 为浏览器实际渲染后导出的效果图。
+
+## M7 作品集
+
+| 文件 | 用途 |
+| --- | --- |
+| [index.html](../index.html) | 手机 / 电脑响应式作品集，内嵌四张效果图，可独立离线显示 |
+| [boss-longimage.png](boss-longimage.png) | 1080×8764，约 1.33 MiB，按手机布局导出的完整长图 |
+| [boss-phone-preview.png](boss-phone-preview.png) | 长图等比缩到 390px，便于核对手机阅读效果 |
+| [portfolio-desktop.png](portfolio-desktop.png) | 1440px 宽桌面网页全页预览 |
+| [portfolio-mobile.png](portfolio-mobile.png) | 390px 宽响应式网页全页预览，与长图的等比缩略预览不同 |
+
+长图由 Playwright 对 `index.html` 截取，540px CSS 视口、2 倍像素密度，输出宽度 1080px；未改变页面正文。网页可以点图查看原尺寸，PNG 是静态图片。作者介绍为用户明确提供的文字，联系方式仅“邮箱：待补充”；GitHub 暂按用户要求显示“待公开”。[M7 验收报告](../m7-validation.md)
 
 ## 四张工具效果图
 
@@ -10,7 +22,7 @@ M6，2026-10-13。以下为当前交付版本；对外展示使用这一版，�
 | --- | --- | --- | --- |
 | 产品拆解 | [tool-teardown.png](tool-teardown.png) | [拆解效果图源页](../demos/teardown.html) | [秘塔真实拆解](../../skills/teardown/examples/02-metaso.md)，截图 M2/M3 与技术观察 MT2/MT3；观察限于该次样本 |
 | 截图改版 | [tool-redesign.png](tool-redesign.png) | [改版效果图源页](../demos/redesign.html) | [宜家 M5 改版说明](../../skills/redesign/examples/01-ikea/rationale.md)；根据实际方案重排的布局示意，完整交互见下表 |
-| 说人话 | [tool-plain-talk.png](tool-plain-talk.png) | [说人话效果图源页](../demos/plain-talk.html) | [用户提供的常见指标示例](../../skills/plain-talk/examples/04-metric.md)；100→112 为比例换算，并非实际人数 |
+| 说人话 | [tool-plain-talk.png](tool-plain-talk.png) | [说人话效果图源页](../demos/plain-talk.html) | [用户提供的常见指标示例](../../skills/plain-talk/examples/04-metric.md)；老板版已按 M7 反馈先给结论；100→112 为比例换算，并非实际人数 |
 | 竞品周报 | [tool-competitor-weekly.png](tool-competitor-weekly.png) | [周报效果图源页](../demos/competitor-weekly.html) | [fixtures 离线周报](../../agents/competitor-weekly/reports/examples/dry-run.md)；演示助手甲/乙/丙均为虚构测试数据，不代表真实 App 动态 |
 
 [README 首屏预览](readme-preview.png)由[本地预览页](../demos/readme-preview.html)导出。它展示 README 的标题、介绍和实际四卡内容；不冒充 GitHub 上线截图，宿主排版与屏幕大小会影响首屏范围。

@@ -1,0 +1,140 @@
+{
+  "date": "2026-10-13",
+  "browser": "Chrome/155.0.8059.39",
+  "isolation": "Chrome for Testing, verified 127.0.0.1 CDP, fresh unsigned-in profile",
+  "serving": "local HTTP /pm-goldfinger/ subpath and file:// standalone page",
+  "checks": [
+    {
+      "name": "Responsive layout 1440",
+      "passed": true,
+      "details": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "images": true,
+        "cardCount": 4,
+        "bio": "王志豪｜5 年 B 端产品经验，近 3 年专注 AI 产品，做过保险销售助手和 AIGC 营销平台。这套工具是我日常工作方法的开源整理。",
+        "contact": "邮箱：待补充"
+      }
+    },
+    {
+      "name": "Responsive layout 768",
+      "passed": true,
+      "details": {
+        "width": 768,
+        "scrollWidth": 768,
+        "images": true,
+        "cardCount": 4,
+        "bio": "王志豪｜5 年 B 端产品经验，近 3 年专注 AI 产品，做过保险销售助手和 AIGC 营销平台。这套工具是我日常工作方法的开源整理。",
+        "contact": "邮箱：待补充"
+      }
+    },
+    {
+      "name": "Responsive layout 390",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "scrollWidth": 390,
+        "images": true,
+        "cardCount": 4,
+        "bio": "王志豪｜5 年 B 端产品经验，近 3 年专注 AI 产品，做过保险销售助手和 AIGC 营销平台。这套工具是我日常工作方法的开源整理。",
+        "contact": "邮箱：待补充"
+      }
+    },
+    {
+      "name": "Responsive layout 320",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "scrollWidth": 320,
+        "images": true,
+        "cardCount": 4,
+        "bio": "王志豪｜5 年 B 端产品经验，近 3 年专注 AI 产品，做过保险销售助手和 AIGC 营销平台。这套工具是我日常工作方法的开源整理。",
+        "contact": "邮箱：待补充"
+      }
+    },
+    {
+      "name": "Image preview opens by keyboard",
+      "passed": true
+    },
+    {
+      "name": "Close button returns to page",
+      "passed": true
+    },
+    {
+      "name": "Back to top navigation",
+      "passed": true
+    },
+    {
+      "name": "Browse tools anchor",
+      "passed": true
+    },
+    {
+      "name": "Modal view, scroll reset, Esc and focus: teardown",
+      "passed": true,
+      "details": {
+        "opened": true,
+        "imageWidth": 1280,
+        "withinScreen": true,
+        "scrollable": true,
+        "scrollReset": true,
+        "focusRestored": true
+      }
+    },
+    {
+      "name": "Modal view, scroll reset, Esc and focus: redesign",
+      "passed": true,
+      "details": {
+        "opened": true,
+        "imageWidth": 1280,
+        "withinScreen": true,
+        "scrollable": true,
+        "scrollReset": true,
+        "focusRestored": true
+      }
+    },
+    {
+      "name": "Modal view, scroll reset, Esc and focus: plain-talk",
+      "passed": true,
+      "details": {
+        "opened": true,
+        "imageWidth": 1280,
+        "withinScreen": true,
+        "scrollable": true,
+        "scrollReset": true,
+        "focusRestored": true
+      }
+    },
+    {
+      "name": "Modal view, scroll reset, Esc and focus: competitor-weekly",
+      "passed": true,
+      "details": {
+        "opened": true,
+        "imageWidth": 1280,
+        "withinScreen": true,
+        "scrollable": true,
+        "scrollReset": true,
+        "focusRestored": true
+      }
+    },
+    {
+      "name": "Longimage download matches PNG under project subpath",
+      "passed": true,
+      "filename": "产品经理金手指-作品集.png"
+    },
+    {
+      "name": "Single HTML renders with embedded images away from assets folder",
+      "passed": true
+    },
+    {
+      "name": "Exact approved author introduction and contact placeholder only",
+      "passed": true
+    },
+    {
+      "name": "Four cards each include image, plain statement, why and one tradeoff",
+      "passed": true
+    }
+  ],
+  "scriptErrors": [],
+  "httpErrors": [],
+  "externalRequests": []
+}

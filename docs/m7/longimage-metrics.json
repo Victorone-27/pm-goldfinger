@@ -1,0 +1,38 @@
+{
+  "cssViewport": 540,
+  "deviceScaleFactor": 2,
+  "pageHeight": 4382,
+  "overflow": false,
+  "titleFont": 50,
+  "cards": [
+    {
+      "name": "拆产品",
+      "titleFont": 36,
+      "promise": "看清用户怎么用，找准下一步改哪里。",
+      "promiseFont": 24
+    },
+    {
+      "name": "改界面",
+      "titleFont": 36,
+      "promise": "不只说哪里不好，还做出可以点的改法。",
+      "promiseFont": 24
+    },
+    {
+      "name": "说人话",
+      "titleFont": 36,
+      "promise": "同一件事，让不同的人都听得懂。",
+      "promiseFont": 24
+    },
+    {
+      "name": "追竞品",
+      "titleFont": 36,
+      "promise": "每周只看新变化，谁更新了什么，一眼懂。",
+      "promiseFont": 24
+    }
+  ],
+  "expectedPngWidth": 1080,
+  "phonePreviewWidth": 390,
+  "equivalentPromiseFontAt390": 17.333333333333332,
+  "equivalentPromiseFontAt375": 16.666666666666668,
+  "capturedUsing": "Playwright screenshot of docs/index.html, mobile CSS viewport 540px, deviceScaleFactor 2, fullPage true"
+}

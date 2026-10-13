@@ -33,6 +33,8 @@ An AI toolkit for product managers: analyze products, redesign screens, explain 
 
 三个 Skill 使用 Codex / Claude Code 的能力；周报是可定时运行的 Python 脚本。当前周报跟踪中国区 App Store，小红书口碑暂缓。
 
+[作品集网页（本地打开）](docs/index.html) · [BOSS 作品集长图](docs/assets/boss-longimage.png) · [手机宽度预览](docs/assets/boss-phone-preview.png)。网页与长图已完成，GitHub 仓库和 Pages 尚未公开；[发布步骤](docs/github-pages.md)待确认后执行。
+
 ## 安装：先用三个 Skill
 
 准备 Python 3.11+ 和 Codex 或 Claude Code。将本仓库下载到固定位置，在仓库根目录运行这一条命令：
@@ -91,7 +93,7 @@ bash scripts/install_skills.sh --uninstall
 
 **示例：**[常见指标](skills/plain-talk/examples/04-metric.md)；[五类完整示例](skills/plain-talk/examples/README.md)。
 
-**取舍：**HR 版可以换算成“每 100 人有多少人”，但必须能精确复算；缺少口径只在研发版指出，不往老板版和 HR 版补免责话或编造收益。
+**取舍：**老板版先说原文支持的结论，再给数字或做法；HR 版可以换算成“每 100 人有多少人”，但必须能精确复算。缺少口径只在研发版指出，不往老板版和 HR 版补免责话或编造收益。
 
 ### ④ 竞品周报：只讲这次新增的变化
 
@@ -139,11 +141,11 @@ bash schedule/install.sh
 - 截图已注明“截图来源：XX 官网，2026-10-13，仅用于产品分析”；与分析无关的人像、署名及匿名会话标识已处理。展示副本与原始证据的哈希分开记录。
 - 原型和四张工具效果图使用中性图形或文字示例，不含第三方商品 / 房间照片。保留的官网截图仅作为分析证据，第三方页面内容不因本项目 MIT 协议而改变权属。[素材说明与来源](docs/assets/README.md)
 - 简历示例由用户明确提供，照实标“用户简历”，没有公司名、姓名或联系方式；指标不被冒充为本工具箱取得的业绩。
-- M0、M1、M2、M4、M4.5、M5 已通过；M5 的 9 条问题获用户认同 8 条以上。M6 交验收，M3 暂缓；尚未公开发布。
+- M0、M1、M2、M4、M4.5、M5、M6 已通过；M5 的 9 条问题获用户认同 8 条以上。M7 网页与长图待验收，M3 暂缓；尚未公开发布。[M7 验收记录](docs/m7-validation.md)
 
 ## 后续计划
 
-工具箱会继续增加。近期安排：M6 验收后制作作品集网页与 BOSS 长图（M7）；小红书口碑（M3）等账号准备好再接入。每个里程碑验收后再推进，推送与发布另行确认。
+工具箱会继续增加。作品集网页与 BOSS 长图（M7）完成后等待验收；GitHub Pages 发布另行确认；小红书口碑（M3）等账号准备好再接入。
 
 ## 致谢与许可证
 

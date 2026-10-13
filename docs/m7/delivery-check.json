@@ -1,0 +1,112 @@
+{
+  "date": "2026-10-13",
+  "baseline_commit": "eafe62a49a7808bd1c9f1ae8d0d74bbad1bc5464",
+  "files_checked": 174,
+  "local_links_checked": 409,
+  "missing_links": [],
+  "privacy_scan_categories": [
+    "secret_key_shape",
+    "private_key",
+    "personal_machine_path",
+    "anonymous_chat_id",
+    "mobile_phone_shape",
+    "email_address"
+  ],
+  "privacy_candidates": [],
+  "privacy_scope": "current tracked and non-ignored text; approved author bio and neutral images reviewed separately, not Git history",
+  "plain_talk_reviews": [
+    {
+      "file": "skills/plain-talk/examples/01-weekly.md",
+      "input_and_source_unchanged": true,
+      "hr_engineering_checks_unchanged": true,
+      "boss_original_numbers_preserved": true,
+      "boss_sentences": 2,
+      "boss_conclusion": "本周主要流程的转化表现更好了"
+    },
+    {
+      "file": "skills/plain-talk/examples/02-prd.md",
+      "input_and_source_unchanged": true,
+      "hr_engineering_checks_unchanged": true,
+      "boss_original_numbers_preserved": true,
+      "boss_sentences": 3,
+      "boss_conclusion": "这次需求要让用户按条件拿到一份订单清单"
+    },
+    {
+      "file": "skills/plain-talk/examples/03-resume.md",
+      "input_and_source_unchanged": true,
+      "hr_engineering_checks_unchanged": true,
+      "boss_original_numbers_preserved": true,
+      "boss_sentences": 2,
+      "boss_conclusion": "保险销售助手在试点中答得更准，客户信息收回的比例也提高了"
+    },
+    {
+      "file": "skills/plain-talk/examples/04-metric.md",
+      "input_and_source_unchanged": true,
+      "hr_engineering_checks_unchanged": true,
+      "boss_original_numbers_preserved": true,
+      "boss_sentences": 1,
+      "boss_conclusion": "用户在变多，第二天回来的比例也更高了"
+    },
+    {
+      "file": "skills/plain-talk/examples/05-technical.md",
+      "input_and_source_unchanged": true,
+      "hr_engineering_checks_unchanged": true,
+      "boss_original_numbers_preserved": true,
+      "boss_sentences": 1,
+      "boss_conclusion": "方案的重点是让回答依据保险条款"
+    }
+  ],
+  "plain_talk_skill_validation": "quick_validate.py passed",
+  "embedded_images": [
+    {
+      "name": "teardown",
+      "matches_current_png": true,
+      "sha256": "dd1fd3df49bec2193fda45f2755f0957cf9642ee8a429504d295e6ac8b7bee43"
+    },
+    {
+      "name": "redesign",
+      "matches_current_png": true,
+      "sha256": "221152324d7bdceee13339e6e0332e9e61d7016cad92a61adfe53dc0e67f611b"
+    },
+    {
+      "name": "plain-talk",
+      "matches_current_png": true,
+      "sha256": "494f975fc96e0039b1378645c7c8f7b45a430c1096b5bacf5442dda2658a9064"
+    },
+    {
+      "name": "competitor-weekly",
+      "matches_current_png": true,
+      "sha256": "980806fa1e4bbe82aa9be180c6a945fbc932301a41c0c62ce5aa554b6a59bdb1"
+    }
+  ],
+  "inline_scripts_valid": true,
+  "image_dimensions": {
+    "boss-longimage.png": [
+      1080,
+      8764
+    ],
+    "boss-phone-preview.png": [
+      390,
+      3165
+    ],
+    "portfolio-desktop.png": [
+      1440,
+      3440
+    ],
+    "portfolio-mobile.png": [
+      390,
+      3995
+    ],
+    "tool-plain-talk.png": [
+      1280,
+      800
+    ]
+  },
+  "boss_png_bytes": 1392208,
+  "authorized_bio_exact": true,
+  "contact_placeholder_only": true,
+  "github_placeholder_user_approved": true,
+  "external_resource_tags": 0,
+  "manual_review": "desktop and mobile layouts; 390px proportional longimage preview inspected in segments; updated plain-talk PNG; no new third-party imagery",
+  "published": false
+}

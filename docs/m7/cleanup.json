@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-13",
+  "browser": {
+    "verified": true,
+    "endpoint": "http://127.0.0.1:64925",
+    "pid": 54104,
+    "bundle_id": "com.google.chrome.for.testing",
+    "browser_version": "Chrome/155.0.8059.39",
+    "stopped": true,
+    "listener_closed": true,
+    "profile_deleted": true
+  },
+  "preview_server": {
+    "bind": "127.0.0.1",
+    "port": 65072,
+    "stopped": true,
+    "listener_closed": true,
+    "termination": "SIGINT to owned exec session; exit 130 expected"
+  }
+}
