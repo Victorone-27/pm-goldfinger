@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "country": "cn",
+  "synthetic": true,
+  "date": "2026-10-12",
+  "observed_at": "2026-10-12T09:00:00+08:00",
+  "apps": [
+    {"name": "演示助手甲", "app_id": 1001, "version": "1.1.0", "release_notes": "新增回答收藏功能，支持查看已收藏的回答。", "release_date": "2026-10-10T00:00:00Z", "rating": 4.5, "rating_count": 100, "url": "https://example.com/fixture-app-1001"},
+    {"name": "演示助手乙", "app_id": 1002, "version": "2.0.0", "release_notes": "修复已知问题。", "release_date": "2026-10-01T00:00:00Z", "rating": 4.3, "rating_count": 210, "url": "https://example.com/fixture-app-1002"},
+    {"name": "演示助手丙", "app_id": 1003, "version": "3.0.0", "release_notes": "优化使用体验。", "release_date": "2026-10-01T00:00:00Z", "rating": 4.0, "rating_count": 300, "url": "https://example.com/fixture-app-1003"}
+  ]
+}

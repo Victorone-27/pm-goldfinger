@@ -1,0 +1,27 @@
+country: cn
+timezone: Asia/Taipei
+
+# 2026-10-13: queried through iTunes Search API and confirmed by the user.
+apps:
+  - name: 豆包
+    search_term: 豆包
+    app_id: 6459478672
+  - name: 千问
+    search_term: 千问
+    app_id: 6466733523
+  - name: 元宝
+    search_term: 元宝
+    app_id: 6480446430
+
+network:
+  timeout_seconds: 20
+  request_interval_seconds: 3
+  retries: 2
+
+# Official API docs checked on 2026-10-13: https://api-docs.deepseek.com/
+llm:
+  base_url: https://api.deepseek.com
+  model: deepseek-flash
+  timeout_seconds: 45
+  max_tokens: 1500
+  max_input_chars: 24000

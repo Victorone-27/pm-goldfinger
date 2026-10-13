@@ -6,19 +6,19 @@ An AI toolkit for product managers, built around traceable examples and practica
 
 ## 当前状态
 
-当前为 M0 仓库骨架，四个工具均在开发中，暂不可安装或运行。
+M0 已通过。M1 App Store 竞品周报已实现，待验收；三个 Skill 仍在开发中。
 
 | 工具 | 用途 | 状态 |
 | --- | --- | --- |
 | [产品拆解](skills/teardown/) | 从公开网页或截图生成有依据的产品分析 | 开发中 · M4 / M4.5 |
 | [截图改版](skills/redesign/) | 从体验问题形成改前、改后可点击原型 | 开发中 · M5 |
 | [说人话](skills/plain-talk/) | 面向老板、HR 和研发改写，保持事实与口径 | 开发中 · M2 |
-| [竞品周报](agents/competitor-weekly/) | 对比 App Store 更新，后续增加小红书口碑变化 | 开发中 · M1 / M3 |
+| [竞品周报](agents/competitor-weekly/) | 对比 App Store 更新，后续增加小红书口碑变化 | M1 待验收；M3 未开始 |
 
 ## 设计原则
 
 - 三个 Skill 提供方法、步骤、模板和检查清单，使用 Codex 或 Claude Code 的能力，不单独调用模型接口。
-- 竞品周报使用 Python 3.11+，用代码做快照与比较，仅将需要解读的内容交给 DeepSeek；计划支持无密钥时直接输出原文。
+- 竞品周报使用 Python 3.11+，用代码做快照与比较，仅将需要解读的内容交给 DeepSeek；无密钥时直接输出原文。
 - 面向求职作品集：每个工具后续提供真实运行示例和效果图，事实附来源，推断单独标明。
 
 ## 目录
