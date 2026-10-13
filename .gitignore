@@ -14,4 +14,18 @@ __pycache__/
 !/agents/competitor-weekly/reports/examples/
 
 # Local rea runtime, dependencies, and isolated browser profiles
-/.local/rea/
+/.local/
+node_modules/
+browser-runs/
+browser-profiles/
+profiles/
+
+# Runtime data, caches and logs must stay local.
+/data/
+snapshots/
+.cache/
+cache/
+caches/
+logs/
+*.log
+*.log.*

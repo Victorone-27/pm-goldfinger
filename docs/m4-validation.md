@@ -39,7 +39,7 @@
 
 ## 本地复现
 
-在 `.`：
+在仓库根目录 `.`：
 
 ```sh
 agents/competitor-weekly/.venv/bin/python -m pytest -q scripts/tests

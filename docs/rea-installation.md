@@ -1,8 +1,6 @@
 # rea 安装与宜家试点验证记录
 
-> 发布前历史清理：项目位置按仓库根目录作相对路径展示；MCP 片段不可原样作为启动配置，实际安装时解析为绝对位置。原始机器路径不公开。
-
-> M6 展示处理：本页机器路径已替换为占位，使用时需填写实际仓库路径；真实安装配置未修改。
+> 发布前审查：本页项目路径统一以仓库根目录为基准，使用相对路径展示；真实安装配置未修改。操作记录中的系统标准目录不含个人用户名。
 
 日期：2026-10-13。本文是宜家试点执行时的历史记录，试点效果现已获用户通过。后续浏览器方案已按用户要求改为独立程序 Chrome for Testing，旧启动命令不再使用；当前规则与 M4.5 整体结果见[整体验证记录](m4.5-validation.md)。下文保留当时操作与偏差事实。[试点报告](rea/ikea-pilot/report.md) · [试点证据](rea/ikea-pilot/sources.md)。
 
@@ -14,7 +12,7 @@
 
 | 项目 | 实际结果 |
 | --- | --- |
-| 安装根目录 | `.local/rea` |
+| 安装根目录 | `.local/rea`（相对仓库根目录） |
 | Node 方式 | 官方便携包 `node-v24.21.0-darwin-arm64` 放在项目内，以绝对路径运行；不增加版本管理工具 |
 | rea | `app/node_modules/rea-agents`，版本 `6.4.0` |
 | 系统默认 Node | 仍为 `v25.8.1`；原 `/opt/homebrew/bin/node` 指向与文件哈希均未改变 |
@@ -26,6 +24,7 @@ Node 24.21.0 满足 rea 的 `^24.11.0` 范围。Node 存档 SHA-256、rea 发布
 正式安装先解压已校验 Node 包，复制预览的 `package.json`、`package-lock.json` 以及 `rea-agents-6.4.0.tgz`，再执行：
 
 ```sh
+# 在仓库根目录执行；运行时解析位置，不在文档保存机器路径。
 REA_ROOT="$(pwd)/.local/rea"
 REA_NODE="$REA_ROOT/node-v24.21.0-darwin-arm64"
 
@@ -45,7 +44,9 @@ env PATH="$REA_NODE/bin:/usr/bin:/bin:/usr/sbin:/sbin" \
 
 ## Codex MCP 的实际改动
 
-在 `~/.codex/config.toml` 仅追加以下内容，原配置备份为同目录 `config.toml.rea.backup`。写入前校验原配置未变；写入后解析比较确认原有配置保留、新项与获批文件一致。
+在 `~/.codex/config.toml` 仅追加 rea 一项，原配置备份为同目录 `config.toml.rea.backup`。写入前校验原配置未变；写入后解析比较确认原有配置保留、新项与获批文件一致。
+
+以下是供审阅的相对路径展示，**不能原样作为宿主启动配置**。当时写入宿主的 `command`、`args[0]`、`cwd` 和 PATH 首项，由安装程序从仓库根目录解析为绝对路径；实际本机配置不进入仓库。
 
 ```toml
 [mcp_servers.rea]

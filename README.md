@@ -149,7 +149,7 @@ bash schedule/install.sh
 
 ## 致谢与许可证
 
-[rea](https://github.com/morluto/rea)提供网站技术观察能力与证据组织方法，采用 MIT，`Copyright (c) 2026 morluto`；依赖保留原许可。[学习笔记](docs/rea-study.md)
+[rea](https://github.com/morluto/rea)提供网站技术观察能力与证据组织方法，采用 MIT，`Copyright (c) 2026 morluto`；[完整 MIT 声明](licenses/rea-MIT.txt)原样保留自 `rea-agents@6.4.0` 发布包，依赖亦保留原许可。[学习笔记](docs/rea-study.md)
 
 [abi/screenshot-to-code](https://github.com/abi/screenshot-to-code)提供截图还原与视觉迭代的方法参考，采用 MIT，`Copyright (c) 2023 Abi Raja`。本项目没有复制其实现或提示词，也没有安装其服务。[参考记录](skills/redesign/references/method.md)
 
