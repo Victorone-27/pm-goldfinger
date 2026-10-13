@@ -13,7 +13,7 @@ from src import fetch, summarize as llm
 from src.config import load_config
 from src.diff import compare
 from src.fetch import AppStoreClient, FetchError
-from src.report import render, week_label
+from src.report import count_text, rating_text, render, week_label
 from src.snapshot import previous_snapshot, read_snapshot
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -59,11 +59,12 @@ def test_no_changes_only_one_line(weeks, config, monkeypatch):
 
 def test_missing_key_preserves_original_report(weeks, config, monkeypatch):
     monkeypatch.delenv("DEEPSEEK_API_KEY", raising=False)
+    monkeypatch.setattr(llm, "read_api_key", lambda: None)
     monkeypatch.setattr(llm, "_post", forbidden)
     report = run_weekly.generate(weeks[1], weeks[0], config, no_llm=False)
-    assert "未设置 DEEPSEEK" in report
+    assert "均未提供可用密钥" in report
     assert weeks[1]["apps"][0]["release_notes"] in report
-    assert "1.0.0 → 1.1.0" in report and "4.2 → 4.3" in report
+    assert "1.0.0 → 1.1.0" in report and "4.20 → 4.30" in report
     assert "无变化：演示助手丙。" in report
 
 
@@ -123,6 +124,7 @@ def test_dry_run_never_calls_network_or_writes_real_snapshots(tmp_path, monkeypa
     monkeypatch.setattr(run_weekly, "ROOT", tmp_path)
     monkeypatch.setattr(fetch, "urlopen", forbidden)
     monkeypatch.setattr(llm, "_post", forbidden)
+    monkeypatch.setattr(llm, "read_api_key", forbidden)
     monkeypatch.setenv("DEEPSEEK_API_KEY", "test-only-placeholder")
     assert run_weekly.main(["--config", str(ROOT / "config.yaml"), "--dry-run"]) == 0
     report = (tmp_path / "reports" / "dry-run" / "2026-W42.md").read_text()
@@ -172,3 +174,31 @@ def test_search_does_not_write_config(config, monkeypatch, capsys):
     assert run_weekly.main(["--search"]) == 0
     assert "搜索不会修改配置" in capsys.readouterr().out
     assert (ROOT / "config.yaml").read_bytes() == original
+
+
+@pytest.mark.parametrize("value,expected", [(None, "未提供"), (0, "0.00"), (4.2, "4.20"), (4.64757, "4.65"), (5, "5.00")])
+def test_rating_has_two_decimals(value, expected):
+    assert rating_text(value) == expected
+
+
+@pytest.mark.parametrize("value,expected", [(None, "未提供"), (0, "0"), (9999, "9999"), (10000, "10000"),
+                                           (10001, "1.0万"), (15678, "1.6万"), (4805987, "480.6万")])
+def test_rating_count_uses_wan_only_above_ten_thousand(value, expected):
+    assert count_text(value) == expected
+
+
+def test_display_rounding_does_not_change_snapshot_or_comparison(weeks, config):
+    previous, current = copy.deepcopy(weeks)
+    previous["apps"][0].update(rating=4.641, rating_count=10001)
+    current["apps"][0].update(rating=4.642, rating_count=10002)
+    original = copy.deepcopy((previous, current))
+    report = run_weekly.generate(current, previous, config, no_llm=True)
+    assert "4.64 → 4.64" in report and "1.0万 → 1.0万" in report
+    assert {"rating", "rating_count"} <= set(compare(current, previous)[0]["fields"])
+    assert (previous, current) == original
+
+
+def test_no_llm_skips_credential_lookup(weeks, config, monkeypatch):
+    monkeypatch.setattr(llm, "read_api_key", forbidden)
+    monkeypatch.setattr(llm, "_post", forbidden)
+    assert "已跳过模型" in run_weekly.generate(weeks[1], weeks[0], config, no_llm=True)

@@ -1,8 +1,16 @@
 import json
-import os
 from pathlib import Path
 from urllib.error import URLError
 from urllib.request import Request, urlopen
+
+from .credentials import read_api_key
+
+
+MISSING_KEY = "环境变量 DEEPSEEK_API_KEY 和 macOS 钥匙串均未提供可用密钥，直接保留原文"
+
+
+def _fallback(reason: str, usage: dict | None = None) -> dict:
+    return {"headline": None, "items": {}, "reason": reason, "usage": usage}
 
 
 def _post(config: dict, payload: dict, api_key: str) -> dict:
@@ -44,21 +52,20 @@ def _validate(result: dict, notes: list[dict]) -> dict:
             "headline_evidence": result["headline_evidence"], "items": items, "reason": None}
 
 
-def summarize(changes: list[dict], config: dict, prompts: Path, no_llm: bool = False) -> dict:
-    fallback = {"headline": None, "items": {}, "reason": None}
-    notes = [{"app_id": change["app"]["app_id"], "name": change["app"]["name"],
-              "release_notes": change["app"]["release_notes"]}
-             for change in changes if change["notes_changed"]]
-    if not notes:
-        return {**fallback, "reason": "没有需要归纳的更新说明变化"}
-    if no_llm:
-        return {**fallback, "reason": "已跳过模型，直接保留原文"}
-    api_key = os.environ.get("DEEPSEEK_API_KEY", "").strip()
-    if not api_key:
-        return {**fallback, "reason": "未设置 DEEPSEEK_API_KEY，直接保留原文"}
+def _usage(response: dict) -> dict | None:
+    usage = response.get("usage") if isinstance(response, dict) else None
+    keys = ("prompt_tokens", "completion_tokens", "total_tokens")
+    if isinstance(usage, dict) and all(type(usage.get(key)) is int and usage[key] >= 0 for key in keys):
+        return {key: usage[key] for key in keys}
+    return None
+
+
+def summarize_notes(notes: list[dict], config: dict, prompts: Path, api_key: str) -> dict:
+    """Make at most one model call; shared by weekly reports and the smoke test."""
     notes_json = json.dumps(notes, ensure_ascii=False)
     if len(notes_json) > config["max_input_chars"]:
-        return {**fallback, "reason": "更新说明超出输入上限，直接保留原文"}
+        return _fallback("更新说明超出输入上限，直接保留原文")
+    usage = None
     try:
         system = (prompts / "summarize_system.md").read_text(encoding="utf-8")
         user = (prompts / "summarize_user.md").read_text(encoding="utf-8").replace("{{release_notes_json}}", notes_json)
@@ -66,9 +73,24 @@ def summarize(changes: list[dict], config: dict, prompts: Path, no_llm: bool = F
             "model": config["model"], "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}],
             "response_format": {"type": "json_object"}, "max_tokens": config["max_tokens"], "stream": False,
         }, api_key)
+        usage = _usage(response)
         choice = response["choices"][0]
         if choice.get("finish_reason") != "stop":
             raise ValueError("Incomplete model output")
-        return _validate(json.loads(choice["message"]["content"]), notes)
+        return {**_validate(json.loads(choice["message"]["content"]), notes), "usage": usage}
     except (URLError, OSError, TimeoutError, ValueError, KeyError, TypeError, IndexError):
-        return {**fallback, "reason": "模型调用失败或输出无法核验，直接保留原文"}
+        return _fallback("模型调用失败或输出无法核验，直接保留原文", usage)
+
+
+def summarize(changes: list[dict], config: dict, prompts: Path, no_llm: bool = False) -> dict:
+    notes = [{"app_id": change["app"]["app_id"], "name": change["app"]["name"],
+              "release_notes": change["app"]["release_notes"]}
+             for change in changes if change["notes_changed"]]
+    if not notes:
+        return _fallback("没有需要归纳的更新说明变化")
+    if no_llm:
+        return _fallback("已跳过模型，直接保留原文")
+    api_key = read_api_key()
+    if not api_key:
+        return _fallback(MISSING_KEY)
+    return summarize_notes(notes, config, prompts, api_key)

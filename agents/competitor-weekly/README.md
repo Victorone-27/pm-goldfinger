@@ -26,7 +26,7 @@ python3 -m venv .venv
 | 演示 App | 第二周变化 |
 | --- | --- |
 | 演示助手甲 | 1.0.0 → 1.1.0；原文写明新增回答收藏功能 |
-| 演示助手乙 | 评分 4.2 → 4.3，评分人数 200 → 210 |
+| 演示助手乙 | 评分 4.20 → 4.30，评分人数 200 → 210 |
 | 演示助手丙 | 无变化，一行带过 |
 
 ## App 配置与确认
@@ -66,6 +66,7 @@ python3 -m venv .venv
 - 比较用户已确认的**上一份有效快照**，报告注明实际对比日期；不假定间隔恰好七天。同日重跑排除当天快照，保持同一比较基线，覆盖当天快照和本周报告。
 - 首次运行或新加入的 App 只建立基线。当前版本的更新说明不被描述为“本周新增功能”。
 - 版本、更新说明、更新日期、评分、评分人数的比较全部由代码完成；App 按已确认 ID 匹配。只改变显示名不会被算成版本变化。
+- 周报评分保留两位小数；评分人数超过 10000 时用“万”表示，保留一位小数，例如 4805987 显示为 `480.6万`。恰好 10000 仍显示 `10000`；快照和比较继续使用原始数值。
 - 仅评分或评分人数变化也会报告；全部字段没变化时，周报只有“本周无重要变化”。此时实际对比日期仍保存在快照的 `baseline_date` 中。
 - 请求至少间隔 3 秒；网络、HTTP 或 JSON 响应错误重试 2 次。任一 App 获取失败则返回非零状态，保留原有快照与周报，不将失败归为“无变化”。
 - 同时启动两个真实任务时，后启动的任务退出，防止覆盖。快照和周报各自原子写入。
@@ -74,11 +75,31 @@ python3 -m venv .venv
 
 ## DeepSeek 解读与降级
 
-密钥只读取环境变量 `DEEPSEEK_API_KEY`，不从配置或文件读取。首次付费调用前需由项目用户确认；本次验收通过无密钥模式完成，不产生模型调用费用。
+运行时优先读取环境变量 `DEEPSEEK_API_KEY`；为空时，在 macOS 上通过 `/usr/bin/security find-generic-password -s pm-goldfinger-deepseek -w` 读取钥匙串。不会将密钥写入代码、配置、plist、快照或日志。钥匙串缺失、不可访问或查询超时，也按无密钥处理。
+
+由你自己在终端执行下面这一条命令存入或更新密钥；末尾的 `-w` 不带值，系统会交互提示输入，命令行和历史记录不包含密钥正文：
+
+```sh
+/usr/bin/security add-generic-password -U -a "$USER" -s pm-goldfinger-deepseek -w
+```
+
+无需把密钥发送给 Agent。本次修订验证仅使用模拟凭据，未读取真实钥匙串，也未执行付费调用。
 
 `config.yaml` 中默认地址为 `https://api.deepseek.com`，模型为 `deepseek-flash`，依据 2026-10-13 查阅的官方文档；模型名称可配置。提示词单独存放在 `prompts/`。
 
 只有更新说明原文相较历史发生变化，才进入模型请求；评分、评分人数与版本号不交给模型计算。首周、仅评分变化、版本变化但说明原文不变时，都不会调用模型。
+
+### 真实模型冒烟测试
+
+你配置好密钥后执行：
+
+```sh
+.venv/bin/python run_weekly.py --llm-smoke-test
+```
+
+激活虚拟环境后也可使用 `python run_weekly.py --llm-smoke-test`。命令读取配置中已确认的豆包 ID，获取它当前的 App Store 更新说明，真实调用一次 DeepSeek，打印归纳结果及 API 返回的输入、输出、合计 token 数；不读取或写入快照，不生成或改写周报。
+
+该命令会产生一次模型调用费用，不自动重试。没有密钥或更新说明时不调用模型；调用失败、归纳无法核验或缺少完整 token 用量时返回非零状态，不误报成功。若 API 返回了 token 用量，即使归纳验证失败也会显示；API 没有返回时明确写无法确认，不填造为零。`--llm-smoke-test` 不能与 `--dry-run`、`--search` 或 `--no-llm` 同用。
 
 模型按 JSON 格式返回功能要点和一句话判断，每项附原文证据片段。程序验证证据是否确实出现在对应 App 原文中，并保留完整原文供核对；这能检查引用真实性，不能保证每个语义判断都正确。
 
@@ -89,22 +110,16 @@ python3 -m venv .venv
 脚本面向 macOS 用户级 launchd，**不会在普通运行时自动安装**。先预览：
 
 ```sh
-bash schedule/install.sh --preview --no-llm
+bash schedule/install.sh --preview
 ```
 
-确认后安装，固定跳过模型：
+确认后安装，默认启用模型解读：
 
 ```sh
-bash schedule/install.sh --no-llm
+bash schedule/install.sh
 ```
 
-若已确认启用付费模型，可改为 `bash schedule/install.sh`。launchd 不自动继承当前终端导出的环境变量；若确实需要模型，需先在当前登录会话的 launchd 环境设置已有变量：
-
-```sh
-launchctl setenv DEEPSEEK_API_KEY "$DEEPSEEK_API_KEY"
-```
-
-这不会把密钥写入 plist，但该环境设置不是跨重启的持久配置；密钥不可用时任务自动退化为原文周报。不要把密钥加入脚本、plist 或仓库文件。
+默认生成的启动参数不含 `--no-llm`。launchd 读不到终端环境变量时，程序从当前用户的 macOS 钥匙串读取已保存的密钥，不依赖 `launchctl setenv`。登录钥匙串需可访问；密钥不可用时任务退化为原文周报。`--no-llm` 仍作为用户主动选择的跳过开关保留。
 
 计划时间为**每周一上午 9:00，以 macOS 系统时区为准**；报告日期由 `config.yaml` 的时区决定，建议二者一致。任务只在用户登录会话运行，安装时不立即执行。系统休眠期间错过日历任务会在唤醒后补执行；关机错过的任务需要之后手动运行。
 
@@ -127,7 +142,7 @@ bash schedule/uninstall.sh
 env -u DEEPSEEK_API_KEY .venv/bin/python run_weekly.py --dry-run
 ```
 
-测试覆盖：版本与评分比较、首周基线、无变化、无密钥与 API 失败降级、原文证据核验、仅发送变化的说明、离线模式不联网、同日基线、跨年周编号、限速与重试、抓取失败保留原文件，以及定时任务不写入密钥。
+测试覆盖：版本与评分比较、首周基线、无变化、无密钥与 API 失败降级、原文证据核验、仅发送变化的说明、离线模式不联网、同日基线、跨年周编号、限速与重试、抓取失败保留原文件，以及定时任务不写入密钥。本次补充环境变量优先与钥匙串兜底、默认安装启用模型、冒烟测试只调用一次且不写文件、真实接口用量字段输出、两位评分和“万”人数的显示边界；测试阻止未模拟的真实钥匙串访问。
 
 ## 官方资料
 
@@ -135,4 +150,5 @@ env -u DEEPSEEK_API_KEY .venv/bin/python run_weekly.py --dry-run
 - [Apple ID Lookup](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/LookupExamples.html)
 - [DeepSeek 首次调用、地址与模型名](https://api-docs.deepseek.com/)
 - [DeepSeek JSON Output](https://api-docs.deepseek.com/guides/json_mode/)
+- [DeepSeek 响应与 token 用量字段](https://api-docs.deepseek.com/api/create-chat-completion/)
 - [Apple 定时任务与休眠行为](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/ScheduledJobs.html)

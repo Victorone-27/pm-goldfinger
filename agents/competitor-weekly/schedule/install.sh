@@ -6,4 +6,5 @@ if [[ ! -x "$task_python" ]]; then
   printf '请先按 README 创建虚拟环境，或设置 PM_GOLDFINGER_PYTHON。\n' >&2
   exit 1
 fi
+# Model access is enabled by default; credentials are resolved at runtime.
 exec "$task_python" "$task_dir/schedule/manage.py" install "$@"

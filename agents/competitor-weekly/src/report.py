@@ -12,8 +12,14 @@ def plain(value) -> str:
     return re.sub(r"([\\`*_{}\[\]<>#|])", r"\\\1", text)
 
 
-def number(value) -> str:
-    return "未提供" if value is None else str(value)
+def rating_text(value) -> str:
+    return "未提供" if value is None else f"{value:.2f}"
+
+
+def count_text(value) -> str:
+    if value is None:
+        return "未提供"
+    return f"{value / 10000:.1f}万" if value > 10000 else str(value)
 
 
 def quoted_original(text: str) -> str:
@@ -54,8 +60,8 @@ def render(current: dict, previous: dict | None, changes: list[dict], summary: d
         app, before = change["app"], change["before"]
         lines += ["", f"## {plain(app['name'])}" + (" · 首次记录" if before is None else ""), ""]
         version = app["version"] if before is None else f"{before['version']} → {app['version']}"
-        rating = number(app["rating"]) if before is None else f"{number(before['rating'])} → {number(app['rating'])}"
-        count = number(app["rating_count"]) if before is None else f"{number(before['rating_count'])} → {number(app['rating_count'])}"
+        rating = rating_text(app["rating"]) if before is None else f"{rating_text(before['rating'])} → {rating_text(app['rating'])}"
+        count = count_text(app["rating_count"]) if before is None else f"{count_text(before['rating_count'])} → {count_text(app['rating_count'])}"
         source_label = "演示链接（非真实 App Store）" if current.get("synthetic") else "中国区 App Store"
         lines += [f"- 版本：{plain(version)}", f"- 当前版本更新日期：{plain(app['release_date'] or '未提供')}",
                   f"- 评分（满分 5 分）：{plain(rating)}；评分人数：{plain(count)}",

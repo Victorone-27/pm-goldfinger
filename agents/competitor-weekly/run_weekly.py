@@ -9,11 +9,12 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from src.config import load_config
+from src.credentials import read_api_key
 from src.diff import compare
 from src.fetch import AppStoreClient, FetchError
 from src.report import render, week_label
 from src.snapshot import atomic_write, previous_snapshot, read_snapshot, run_lock
-from src.summarize import summarize
+from src.summarize import summarize, summarize_notes
 
 ROOT = Path(__file__).resolve().parent
 
@@ -24,7 +25,40 @@ def generate(current: dict, previous: dict | None, config: dict, no_llm: bool) -
     return render(current, previous, changes, summary)
 
 
+def smoke_test(config: dict) -> None:
+    app = next((app for app in config["apps"] if app["name"] == "豆包"), None)
+    if app is None or app.get("app_id") is None:
+        raise ValueError("冒烟测试需要配置已确认 App ID 的豆包。")
+    api_key = read_api_key()
+    if not api_key:
+        raise ValueError("冒烟测试未调用模型：请先配置环境变量 DEEPSEEK_API_KEY 或钥匙串服务 pm-goldfinger-deepseek。")
+    current = AppStoreClient(config["network"], config["country"]).lookup(app)
+    if not current["release_notes"].strip():
+        raise ValueError("豆包当前没有更新说明，未调用模型。")
+    notes = [{"app_id": current["app_id"], "name": current["name"], "release_notes": current["release_notes"]}]
+    result = summarize_notes(notes, config["llm"], ROOT / "prompts", api_key)
+    print(f"豆包当前版本：{current['version']}\n来源：{current['url']}")
+    if result["headline"]:
+        print(f"归纳：{result['headline']}")
+        for point in result["items"][current["app_id"]]:
+            print(f"- {point['text']}（原文依据：{point['evidence']}）")
+    usage = result["usage"]
+    if usage is not None:
+        print(f"Token 用量（API 返回）：输入 {usage['prompt_tokens']}，输出 {usage['completion_tokens']}，合计 {usage['total_tokens']}")
+    else:
+        print("Token 用量：API 未返回可核验的完整用量，无法确认消耗。")
+    if result["reason"]:
+        reason = result["reason"].removesuffix("，直接保留原文")
+        raise ValueError(f"冒烟测试未通过：{reason}。本命令未写入周报或快照。")
+    if usage is None:
+        raise ValueError("归纳已返回，但缺少完整 token 用量，冒烟测试未通过。")
+    print("冒烟测试通过；未写入周报或快照。")
+
+
 def run(args, config: dict) -> Path | None:
+    if args.llm_smoke_test:
+        smoke_test(config)
+        return None
     if args.dry_run:
         previous = read_snapshot(ROOT / "fixtures" / "week1.json")
         current = read_snapshot(ROOT / "fixtures" / "week2.json")
@@ -67,8 +101,11 @@ def main(argv=None) -> int:
     modes = parser.add_mutually_exclusive_group()
     modes.add_argument("--dry-run", action="store_true", help="使用两周虚构测试数据，全程不联网")
     modes.add_argument("--search", action="store_true", help="查找 App 候选，不修改配置")
+    modes.add_argument("--llm-smoke-test", action="store_true", help="用豆包当前更新说明调用一次模型，打印归纳及 token 用量，不保存报告或快照")
     parser.add_argument("--no-llm", action="store_true", help="跳过模型，仅展示原文")
     args = parser.parse_args(argv)
+    if args.llm_smoke_test and args.no_llm:
+        parser.error("--llm-smoke-test 不能与 --no-llm 同时使用")
     try:
         config = load_config(args.config)
         result = run(args, config)
