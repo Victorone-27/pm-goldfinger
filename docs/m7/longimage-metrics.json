@@ -1,7 +1,7 @@
 {
   "cssViewport": 540,
   "deviceScaleFactor": 2,
-  "pageHeight": 4382,
+  "pageHeight": 4635,
   "overflow": false,
   "titleFont": 50,
   "cards": [
@@ -34,5 +34,12 @@
   "phonePreviewWidth": 390,
   "equivalentPromiseFontAt390": 17.333333333333332,
   "equivalentPromiseFontAt375": 16.666666666666668,
-  "capturedUsing": "Playwright screenshot of docs/index.html, mobile CSS viewport 540px, deviceScaleFactor 2, fullPage true"
+  "capturedUsing": "Playwright screenshot of docs/index.html, mobile CSS viewport 540px, deviceScaleFactor 2, fullPage true",
+  "qr": {
+    "destination": "https://victorone-27.github.io/pm-goldfinger/",
+    "inHtml": true,
+    "inBossLongimage": true,
+    "inPhonePreview": true
+  },
+  "exportedAt": "2026-10-14"
 }

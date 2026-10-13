@@ -33,7 +33,7 @@ An AI toolkit for product managers: analyze products, redesign screens, explain 
 
 三个 Skill 使用 Codex / Claude Code 的能力；周报是可定时运行的 Python 脚本。当前周报跟踪中国区 App Store，小红书口碑暂缓。
 
-[作品集网页（本地打开）](docs/index.html) · [BOSS 作品集长图](docs/assets/boss-longimage.png) · [手机宽度预览](docs/assets/boss-phone-preview.png)。网页与长图已完成，GitHub 仓库和 Pages 尚未公开；[发布步骤](docs/github-pages.md)待确认后执行。
+[作品集网页](docs/index.html) · [BOSS 作品集长图](docs/assets/boss-longimage.png) · [手机宽度预览](docs/assets/boss-phone-preview.png)。源码已发布到 [GitHub 仓库](https://github.com/Victorone-27/pm-goldfinger)，线上作品集见 [GitHub Pages](https://victorone-27.github.io/pm-goldfinger/)；[发布记录](docs/github-pages.md)。
 
 ## 安装：先用三个 Skill
 
@@ -141,11 +141,11 @@ bash schedule/install.sh
 - 截图已注明“截图来源：XX 官网，2026-10-13，仅用于产品分析”；与分析无关的人像、署名及匿名会话标识已处理。展示副本与原始证据的哈希分开记录。
 - 原型和四张工具效果图使用中性图形或文字示例，不含第三方商品 / 房间照片。保留的官网截图仅作为分析证据，第三方页面内容不因本项目 MIT 协议而改变权属。[素材说明与来源](docs/assets/README.md)
 - 简历示例由用户明确提供，照实标“用户简历”，没有公司名、姓名或联系方式；指标不被冒充为本工具箱取得的业绩。
-- M0、M1、M2、M4、M4.5、M5、M6 已通过；M5 的 9 条问题获用户认同 8 条以上。M7 网页与长图待验收，M3 暂缓；尚未公开发布。[M7 验收记录](docs/m7-validation.md)
+- M0、M1、M2、M4、M4.5、M5、M6、M7 已通过；M5 的 9 条问题获用户认同 8 条以上。M3 暂缓，公开仓库与 GitHub Pages 已上线。[M7 验收记录](docs/m7-validation.md)
 
 ## 后续计划
 
-工具箱会继续增加。作品集网页与 BOSS 长图（M7）完成后等待验收；GitHub Pages 发布另行确认；小红书口碑（M3）等账号准备好再接入。
+工具箱会继续增加。作品集网页与 BOSS 长图已通过验收并上线 GitHub Pages；小红书口碑（M3）等账号准备好再接入。
 
 ## 致谢与许可证
 

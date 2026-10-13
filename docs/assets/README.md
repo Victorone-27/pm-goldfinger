@@ -1,18 +1,18 @@
 # 演示素材与来源
 
-2026-10-13。M6 完成四工具与改版素材；M7 更新说人话老板版图片，并新增作品集网页与长图。以下为当前交付版本，对外展示替代旧配图版本。HTML 为可编辑源页，PNG 为浏览器实际渲染后导出的效果图。
+2026-10-14。M6 完成四工具与改版素材；M7 更新说人话老板版图片，并新增作品集网页与长图。以下为当前公开交付版本，对外展示替代旧配图版本。HTML 为可编辑源页，PNG 为浏览器实际渲染后导出的效果图。
 
 ## M7 作品集
 
 | 文件 | 用途 |
 | --- | --- |
 | [index.html](../index.html) | 手机 / 电脑响应式作品集，内嵌四张效果图，可独立离线显示 |
-| [boss-longimage.png](boss-longimage.png) | 1080×8764，约 1.33 MiB，按手机布局导出的完整长图 |
-| [boss-phone-preview.png](boss-phone-preview.png) | 长图等比缩到 390px，便于核对手机阅读效果 |
-| [portfolio-desktop.png](portfolio-desktop.png) | 1440px 宽桌面网页全页预览 |
-| [portfolio-mobile.png](portfolio-mobile.png) | 390px 宽响应式网页全页预览，与长图的等比缩略预览不同 |
+| [boss-longimage.png](boss-longimage.png) | 1080×9270，按手机布局导出的完整长图，底部含 Pages 二维码 |
+| [boss-phone-preview.png](boss-phone-preview.png) | 390×4310 的手机宽度卡片，底部含 Pages 二维码 |
+| [portfolio-desktop.png](portfolio-desktop.png) | 1440×3711 桌面网页全页预览 |
+| [portfolio-mobile.png](portfolio-mobile.png) | 390×4310 响应式网页全页预览，与长图的手机卡片同步更新 |
 
-长图由 Playwright 对 `index.html` 截取，540px CSS 视口、2 倍像素密度，输出宽度 1080px；未改变页面正文。网页可以点图查看原尺寸，PNG 是静态图片。作者介绍为用户明确提供的文字，联系方式仅“邮箱：待补充”；GitHub 暂按用户要求显示“待公开”。[M7 验收报告](../m7-validation.md)
+长图由 Playwright 对 `index.html` 截取，540px CSS 视口、2 倍像素密度，输出宽度 1080px；网页底部包含 GitHub Pages 二维码，手机宽度预览同步保留。网页可以点图查看原尺寸，PNG 是静态图片。作者介绍为用户明确提供的文字，联系方式仅“邮箱：待补充”。源码见 [GitHub 仓库](https://github.com/Victorone-27/pm-goldfinger)，线上版本见 [GitHub Pages](https://victorone-27.github.io/pm-goldfinger/)。[M7 验收报告](../m7-validation.md)
 
 ## 四张工具效果图
 

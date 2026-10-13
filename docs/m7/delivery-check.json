@@ -83,30 +83,32 @@
   "image_dimensions": {
     "boss-longimage.png": [
       1080,
-      8764
+      9270
     ],
     "boss-phone-preview.png": [
       390,
-      3165
+      4310
     ],
     "portfolio-desktop.png": [
       1440,
-      3440
+      3711
     ],
     "portfolio-mobile.png": [
       390,
-      3995
+      4310
     ],
     "tool-plain-talk.png": [
       1280,
       800
     ]
   },
-  "boss_png_bytes": 1392208,
+  "boss_png_bytes": 1274217,
   "authorized_bio_exact": true,
   "contact_placeholder_only": true,
-  "github_placeholder_user_approved": true,
   "external_resource_tags": 0,
-  "manual_review": "desktop and mobile layouts; 390px proportional longimage preview inspected in segments; updated plain-talk PNG; no new third-party imagery",
-  "published": false
+  "manual_review": "desktop and mobile layouts; refreshed long image and phone card with live repository link and Pages QR; no new third-party imagery",
+  "published": true,
+  "github_repository": "https://github.com/Victorone-27/pm-goldfinger",
+  "github_pages": "https://victorone-27.github.io/pm-goldfinger/",
+  "pages_qr_in_phone_card": true
 }
