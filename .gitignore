@@ -1,0 +1,14 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+# Preserve directory placeholders, but exclude runtime data and real reports.
+/agents/competitor-weekly/data/*
+!/agents/competitor-weekly/data/.gitkeep
+/agents/competitor-weekly/reports/*
+!/agents/competitor-weekly/reports/.gitkeep
+!/agents/competitor-weekly/reports/examples/
