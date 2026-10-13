@@ -1,0 +1,66 @@
+{
+  "responsive": [
+    {
+      "page": "01-ikea/before",
+      "width": 390,
+      "no_horizontal_overflow": true
+    },
+    {
+      "page": "01-ikea/after",
+      "width": 390,
+      "no_horizontal_overflow": true
+    },
+    {
+      "page": "01-ikea/compare",
+      "width": 390,
+      "no_horizontal_overflow": true
+    },
+    {
+      "page": "01-ikea/compare",
+      "width": 1600,
+      "left_right": true
+    },
+    {
+      "page": "02-metaso/before",
+      "width": 390,
+      "no_horizontal_overflow": true
+    },
+    {
+      "page": "02-metaso/after",
+      "width": 390,
+      "no_horizontal_overflow": true
+    },
+    {
+      "page": "02-metaso/compare",
+      "width": 390,
+      "no_horizontal_overflow": true
+    },
+    {
+      "page": "02-metaso/compare",
+      "width": 1600,
+      "left_right": true
+    },
+    {
+      "page": "03-sspai/before",
+      "width": 390,
+      "no_horizontal_overflow": true
+    },
+    {
+      "page": "03-sspai/after",
+      "width": 390,
+      "no_horizontal_overflow": true
+    },
+    {
+      "page": "03-sspai/compare",
+      "width": 390,
+      "no_horizontal_overflow": true
+    },
+    {
+      "page": "03-sspai/compare",
+      "width": 1600,
+      "left_right": true
+    }
+  ],
+  "console_errors": [],
+  "external_requests": []
+}

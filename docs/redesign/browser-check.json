@@ -1,0 +1,142 @@
+{
+  "date": "2026-10-13",
+  "browser": "Chrome for Testing 155.0.8059.39",
+  "transport": "verified 127.0.0.1 CDP",
+  "checks": [
+    {
+      "name": "两个浮层确实重叠",
+      "passed": true
+    },
+    {
+      "name": "宜家拒绝后推广仍可见",
+      "passed": true
+    },
+    {
+      "name": "宜家改前推广可点击",
+      "passed": true
+    },
+    {
+      "name": "Escape关闭弹窗",
+      "passed": true
+    },
+    {
+      "name": "改后未选择隐私也能进入房间",
+      "passed": true
+    },
+    {
+      "name": "关闭后焦点回到触发按钮",
+      "passed": true
+    },
+    {
+      "name": "改后拒绝状态明确",
+      "passed": true
+    },
+    {
+      "name": "隐私选择可修改",
+      "passed": true
+    },
+    {
+      "name": "重置恢复初始状态",
+      "passed": true
+    },
+    {
+      "name": "追问状态无行内引用还原",
+      "passed": true
+    },
+    {
+      "name": "初答独立状态显示同名来源",
+      "passed": true
+    },
+    {
+      "name": "初答来源可点击",
+      "passed": true
+    },
+    {
+      "name": "依据不足状态明确",
+      "passed": true
+    },
+    {
+      "name": "自由输入不伪造新回答",
+      "passed": true
+    },
+    {
+      "name": "改前月付入口可点击",
+      "passed": true
+    },
+    {
+      "name": "改前FAQ显示月付边界",
+      "passed": true
+    },
+    {
+      "name": "栏目补充状态单独呈现",
+      "passed": true
+    },
+    {
+      "name": "目标栏目默认月付不包含",
+      "passed": true
+    },
+    {
+      "name": "深度内容月付和年付都包含",
+      "passed": true
+    },
+    {
+      "name": "单买不解锁深度内容",
+      "passed": true
+    },
+    {
+      "name": "免费样本三种方案均提示无需购买",
+      "passed": true
+    },
+    {
+      "name": "详情保留当前需求与不结算提示",
+      "passed": true
+    },
+    {
+      "name": "套餐重置回初始阅读需求",
+      "passed": true
+    },
+    {
+      "name": "本轮无脚本错误",
+      "passed": true
+    },
+    {
+      "name": "原型初载与本地交互无外部请求",
+      "passed": true
+    },
+    {
+      "name": "通俗解释1定位能量原文",
+      "passed": true
+    },
+    {
+      "name": "通俗解释2定位电路实验原文",
+      "passed": true
+    },
+    {
+      "name": "查证建议保留同一追问任务",
+      "passed": true
+    },
+    {
+      "name": "秘塔修改后窄屏无溢出",
+      "passed": true
+    },
+    {
+      "name": "总览包含三个对比入口",
+      "passed": true
+    },
+    {
+      "name": "总览可进入宜家对比",
+      "passed": true
+    },
+    {
+      "name": "手机可切换权益并打开详情",
+      "passed": true
+    },
+    {
+      "name": "手机引用可定位到证据卡",
+      "passed": true
+    }
+  ],
+  "console_errors": [],
+  "external_requests": [],
+  "note": "已根据原PDF截图复核通俗解释的具体原文；初版姓名/授奖理由交互测试已由最终解释内容的测试替换。"
+}

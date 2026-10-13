@@ -6,12 +6,12 @@ An AI toolkit for product managers, built around traceable examples and practica
 
 ## 当前状态
 
-M0、M1、M2、M4 已通过。M3 小红书口碑暂缓，等用户准备账号。M4.5 的 [rea 学习笔记](docs/rea-study.md)与[宜家试点](docs/rea/ikea-pilot/report.md)已通过；宜家、秘塔、少数派三例均已补技术透视，Skill 与模板已接入，现交 [M4.5 整体验收](docs/m4.5-validation.md)。截图改版待 M5。
+M0、M1、M2、M4、M4.5 已通过。M3 小红书口碑暂缓，等用户准备账号。M5 截图改版已完成三组可点击方案，现交 [M5 验收](docs/m5-validation.md)，等待确认；M6 尚未开始。
 
 | 工具 | 用途 | 状态 |
 | --- | --- | --- |
-| [产品拆解](skills/teardown/) | 从公开网页或截图生成产品分析，网页可附技术证据 | M4 已通过 · 含 30 秒速读；M4.5 三例技术透视待整体验收 |
-| [截图改版](skills/redesign/) | 从体验问题形成改前、改后可点击原型 | 开发中 · M5 |
+| [产品拆解](skills/teardown/) | 从公开网页或截图生成产品分析，网页可附技术证据 | M4、M4.5 已通过 · 含 30 秒速读与三例技术透视 |
+| [截图改版](skills/redesign/) | 从体验问题形成改前、改后可点击原型 | M5 待验收 · [三组交互对比](skills/redesign/examples/index.html) |
 | [说人话](skills/plain-talk/) | 面向老板、HR 和研发改写，保持事实与口径 | M2 已通过 |
 | [竞品周报](agents/competitor-weekly/) | 对比 App Store 更新，后续增加小红书口碑变化 | M1 已通过；M3 暂缓，等用户准备账号 |
 
@@ -41,7 +41,7 @@ TASKS.md                   原始任务书与验收标准
 bash scripts/install_skills.sh
 ```
 
-脚本先打印计划，输入 `y` 后才会创建链接；默认安装到 Codex 的 `~/.agents/skills` 和 Claude Code 的 `~/.claude/skills`。当前安装已完成的 `plain-talk` 和 `teardown`，跳过截图改版的占位文件。通过软链接引用本仓库，请保留仓库位置；更新 Skill 文件后宿主会读取新内容。
+脚本先打印计划，输入 `y` 后才会创建链接；默认安装到 Codex 的 `~/.agents/skills` 和 Claude Code 的 `~/.claude/skills`。当前可安装 `plain-talk`、`teardown` 和 `redesign`。通过软链接引用本仓库，请保留仓库位置；更新 Skill 文件后宿主会读取新内容。
 
 按宿主安装、预览和卸载：
 
@@ -52,7 +52,7 @@ bash scripts/install_skills.sh --target claude
 bash scripts/install_skills.sh --uninstall
 ```
 
-重复安装不会重复创建；已有同名文件或其他来源的链接时拒绝覆盖。卸载只删除指向本仓库的链接，保留源文件及其他技能。`--skill plain-talk` 或 `--skill teardown` 可限定技能；`--yes` 用于已确认的自动化操作，仍先打印计划。
+重复安装不会重复创建；已有同名文件或其他来源的链接时拒绝覆盖。卸载只删除指向本仓库的链接，保留源文件及其他技能。`--skill plain-talk`、`--skill teardown` 或 `--skill redesign` 可限定技能；`--yes` 用于已确认的自动化操作，仍先打印计划。
 
 安装后对 Codex 说：
 
@@ -78,6 +78,12 @@ bash scripts/install_skills.sh --uninstall
 
 rea 6.4.0 使用项目内独立 Node 24.21.0，系统默认 Node 25 保留。[最初安装记录](docs/rea-installation.md)保留宜家试点的窗口误读偏差；后续已改用不同程序 Chrome for Testing，并加入[隔离启动与核验脚本](skills/teardown/scripts/isolated_browser.py)。禁止通用窗口/无障碍工具；只通过核验的 127.0.0.1 端口操作，用后关闭并删除 profile。详见[当前流程](skills/teardown/references/technical-observation.md)与[整体验证](docs/m4.5-validation.md)。实际 MCP 协议调用通过，当前聊天原生 MCP 重连尚未验证。依赖不由 Skill 安装脚本自动安装。
 
+## 使用「截图改版」
+
+提供截图后说“根据这张截图改版，重点解决入口被浮层遮挡的问题”，或显式用 `$redesign` / `/redesign`。也可指定已有拆解报告的条目，直接使用已保存截图。输出每组 3–5 个问题、来源映射、验证思路、单文件 before/after、可点击 compare 和效果图；不另调模型 API。
+
+[三组交互总览](skills/redesign/examples/index.html)承接已有报告：宜家房间入口、秘塔追问引用、少数派 PRIME 权益。所有原型离线可用，品牌用占位色块，搜索和购买均为本地演示。网页浏览检查仍遵守本项目的独立程序与端口核验约定。[Skill](skills/redesign/SKILL.md) · [M5 验证记录](docs/m5-validation.md)。
+
 ## 开发顺序
 
 当前顺序：M0 仓库骨架 → M1 App Store 周报 → M2 说人话（含 Skill 安装脚本）→ M4 产品拆解 → M4.5 技术透视 → M5 截图改版 → M6 演示素材与 README → M7 作品集网页和 BOSS 长图。M3 小红书口碑暂缓，等用户准备好账号后再安排；原始 TASKS.md 保留不改。
@@ -87,6 +93,8 @@ rea 6.4.0 使用项目内独立 Node 24.21.0，系统默认 Node 25 保留。[�
 ## 致谢
 
 [rea（Reverse Engineer Anything）](https://github.com/morluto/rea)为本项目技术透视提供网站观察能力与证据组织方法。上游采用 [MIT 许可证](https://github.com/morluto/rea/blob/a56f7bb668ab23fec8d33f7af353ac7ed2fe1895/LICENSE)，`Copyright (c) 2026 morluto`；安装包保留原版权与许可证。本阶段调用依赖、参考方法，没有复制其实现代码到本仓库。[学习笔记](docs/rea-study.md)记录取舍。
+
+[abi/screenshot-to-code](https://github.com/abi/screenshot-to-code)为截图还原及视觉迭代提供方法参考；已核对其 MIT 协议，`Copyright (c) 2023 Abi Raja`。本项目未复制其实现或提示词，未安装其服务；在截图还原与改后原型之间加入有来源的问题判断与验证方案。见[参考说明](skills/redesign/references/method.md)。
 
 ## 许可证
 

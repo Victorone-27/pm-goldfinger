@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{产品}} · 改前改后</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;padding:28px;font:16px/1.65 system-ui,sans-serif;color:#193047;background:#f2f5f8}main{max-width:1600px;margin:auto}.pair{display:grid;grid-template-columns:1fr 1fr;gap:20px}.panel{background:white;border:1px solid #c9d4de;border-radius:12px;overflow:hidden}.panel h2{padding:14px;margin:0;font-size:18px}iframe{width:100%;height:760px;border:0;background:white}button{font:inherit;padding:8px 16px;cursor:pointer;border:1px solid #bac8d4;border-radius:8px;background:white}a{color:#2458a5}a:focus-visible,button:focus-visible{outline:3px solid #245bd3;outline-offset:3px}.explain{margin-top:24px;padding:22px;background:white;border-radius:12px}@media(max-width:640px){body{padding:16px}.pair{grid-template-columns:1fr}}
+  </style>
+</head>
+<body><main>
+  <h1>{{用大白话说明变化}}</h1><p>{{来自什么截图、解决哪个任务}}</p>
+  <div class="pair"><section class="panel"><h2>改前 · {{核心问题}} <a href="before.html">单独打开</a></h2><iframe id="before" src="before.html" title="改前可点击原型"></iframe></section><section class="panel"><h2>改后 · {{核心改法}} <a href="after.html">单独打开</a></h2><iframe id="after" src="after.html" title="改后可点击原型"></iframe></section></div>
+  <p>{{说明两侧如何操作}} <button id="reset">重置两侧</button></p>
+  <section class="explain"><h2>问题从哪来，具体改了什么</h2><p>{{问题来自报告标题、章节、第几条，附链接}}</p><ol><li>{{位置、事实、影响假设、改法、指标}}</li></ol><p>{{小范围验证与取舍}}</p><a href="rationale.md">完整改版说明</a></section>
+</main><script>document.getElementById('reset').onclick=()=>{document.getElementById('before').src='before.html';document.getElementById('after').src='after.html';};</script></body>
+</html>

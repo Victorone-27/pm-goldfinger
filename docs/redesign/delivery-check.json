@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-13",
+  "local_links_checked": 104,
+  "missing_links": [],
+  "inline_scripts_checked": 11,
+  "script_syntax_valid": true,
+  "single_file_prototypes": [
+    {
+      "file": "skills/redesign/examples/03-sspai/after.html",
+      "self_contained": true
+    },
+    {
+      "file": "skills/redesign/examples/03-sspai/before.html",
+      "self_contained": true
+    },
+    {
+      "file": "skills/redesign/examples/02-metaso/after.html",
+      "self_contained": true
+    },
+    {
+      "file": "skills/redesign/examples/02-metaso/before.html",
+      "self_contained": true
+    },
+    {
+      "file": "skills/redesign/examples/01-ikea/after.html",
+      "self_contained": true
+    },
+    {
+      "file": "skills/redesign/examples/01-ikea/before.html",
+      "self_contained": true
+    }
+  ],
+  "secret_scan": "common real-key patterns over tracked and non-ignored new text files; does not prove all possible formats absent",
+  "secret_pattern_hits": [],
+  "input_hashes_match": true,
+  "skill_links": {
+    "~/.agents/skills/redesign": true,
+    "~/.claude/skills/redesign": true
+  }
+}

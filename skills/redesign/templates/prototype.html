@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{页面}} · {{改前或改后}}</title>
+  <style>
+    /* Replace content and styling with the screenshot-specific layout. Keep assets inline. */
+    *{box-sizing:border-box}body{margin:0;font:16px/1.65 system-ui,sans-serif;color:#162a3c;background:#f6f8fa}header,main{padding:24px;max-width:1040px;margin:auto}.brand{display:inline-block;width:36px;height:28px;background:#476797;border-radius:4px}main{background:white}button{font:inherit;border:1px solid #9daaba;border-radius:8px;padding:10px 16px;background:white;cursor:pointer}button:focus-visible{outline:3px solid #245bd3;outline-offset:3px}dialog{max-width:440px;width:90%;border:1px solid #b2c1d0;border-radius:14px;padding:24px}dialog::backdrop{background:#162a3c66}.issue{background:#c7472f;color:#fff;display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%}p{overflow-wrap:anywhere}@media(max-width:500px){header,main{padding:18px}}
+  </style>
+</head>
+<body>
+  <header><span class="brand" aria-label="品牌占位色块"></span> 演示草图 · {{状态与截图日期}}</header>
+  <main><h1>{{用户任务标题}}</h1><p><span class="issue" aria-label="问题 1">1</span> {{在改前的具体问题位置放编号；改后移除}}</p><button id="action">{{核心动作}}</button><p id="status" role="status"></p></main>
+  <dialog id="detail" aria-labelledby="dialog-title"><h2 id="dialog-title">{{动作结果}}</h2><p>本地演示，不提交到真实服务。</p><button id="close">返回</button></dialog>
+  <script>
+    const dialog=document.getElementById('detail');
+    document.getElementById('action').onclick=()=>dialog.showModal();
+    document.getElementById('close').onclick=()=>dialog.close();
+    dialog.onclose=()=>{document.getElementById('status').textContent='已返回，可以继续操作。';document.getElementById('action').focus();};
+  </script>
+</body>
+</html>
