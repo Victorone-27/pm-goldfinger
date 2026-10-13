@@ -1,0 +1,6 @@
+{
+  "valid_owned_browser": true,
+  "daily_chrome_name_rejected": "Daily Google Chrome and other browsers are forbidden",
+  "non_loopback_rejected": "CDP must use an explicit port on literal 127.0.0.1",
+  "identity_mismatch_rejected": "Owned PID identity changed"
+}

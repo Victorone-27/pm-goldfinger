@@ -1,0 +1,63 @@
+{
+  "kind": "redacted_summary_not_original_evidence",
+  "source_evidence_id": "ev_f2267e000168be8f3b605433e01cb7e14d1ffca4478061761218f8c450386ace",
+  "operation": "observe_web_session",
+  "window": {
+    "armed_at": "2026-10-13T10:48:55.239Z",
+    "ended_at": "2026-10-13T10:49:20.243Z",
+    "requested_ms": 25000,
+    "end_reason": "window_elapsed"
+  },
+  "timeline": [
+    {
+      "type": "lifecycle",
+      "timestamp": 116008.492233,
+      "url": null
+    },
+    {
+      "type": "lifecycle",
+      "timestamp": 116009.336655,
+      "url": null
+    },
+    {
+      "type": "lifecycle",
+      "timestamp": 116014.586857,
+      "url": null
+    },
+    {
+      "type": "lifecycle",
+      "timestamp": 116015.172296,
+      "url": null
+    },
+    {
+      "type": "lifecycle",
+      "timestamp": 116015.196742,
+      "url": null
+    },
+    {
+      "type": "same_document_navigation",
+      "timestamp": 0,
+      "url": "https://metaso.cn/chat/[session]"
+    },
+    {
+      "type": "same_document_navigation",
+      "timestamp": 0,
+      "url": "https://metaso.cn/chat/[session]"
+    },
+    {
+      "type": "load_failed",
+      "timestamp": 116195.526342,
+      "url": null
+    },
+    {
+      "type": "load_failed",
+      "timestamp": 116206.136334,
+      "url": null
+    }
+  ],
+  "limitations": [
+    "The timeline begins after REA attaches; earlier navigation and network activity is unavailable.",
+    "Only navigation metadata is retained; headers, bodies, cookies, console values, and payloads are not captured by this tool.",
+    "An out-of-policy destination ends collection immediately and is recorded without its URL."
+  ]
+}

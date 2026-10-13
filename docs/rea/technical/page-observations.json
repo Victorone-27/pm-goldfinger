@@ -1,0 +1,23 @@
+{
+  "source": "Host page DOM through the verified Chrome for Testing CDP endpoint; not native accessibility or REA Evidence",
+  "observations": [
+    {
+      "observed_date": "2026-10-13",
+      "page": "https://sspai.com/prime/explore",
+      "action": "Click 年付和月付会员有什么区别？ and read visible body text",
+      "excerpt": "月付会员享有专属深度内容、会员社区、站内直享折扣等主要权益，但不享有会员栏目畅读等特殊权益。",
+      "other_observations": [
+        "首屏有立即加入；月付/年付套餐卡各有加入会员。",
+        "会员栏目畅读说明限定付费栏目中标记为会员免费的栏目。"
+      ],
+      "screenshot_limit": "The new FAQ screenshot was captured during expansion and shows the question but not its answer. The text conclusion is supported by this DOM observation and the earlier M4 FAQ screenshot."
+    },
+    {
+      "observed_date": "2026-10-13",
+      "page": "https://sspai.com/series/422/list",
+      "action": "Read visible directory DOM",
+      "excerpt": "免费试读；全部内容（付费后可读）",
+      "screenshot_limit": "The new directory screenshot shows the first trial section, price and annual membership label; the paid-section heading is below the viewport."
+    }
+  ]
+}

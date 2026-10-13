@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-10-13T11:13:46.370712+00:00",
+  "checks": {
+    "stream_request_type_counts_times_and_termination_match": true,
+    "followup_rea_corroborates_host_cdp": true,
+    "sspai_reported_endpoints_observed": true,
+    "eight_new_screenshot_hashes_match": true,
+    "original_three_product_reports_preserved_outside_added_technical_section": true,
+    "common_credential_patterns_absent": true,
+    "changed_markdown_links_resolve": true,
+    "rea_mcp_config_matches_approved_scope": true,
+    "owned_browser_closed_profiles_removed": true,
+    "installed_skill_link_points_to_updated_source": true,
+    "skill_creator_quick_validate": "passed using existing project virtualenv PyYAML",
+    "guard_live_launch_verify_stop_and_negative_cases": "passed; see isolation-check.json",
+    "git_diff_check": true,
+    "other_milestones_unchanged": true
+  },
+  "scope": "M4.5 examples, Skill and browser guard; no repeated website/model calls",
+  "screenshots_reviewed": "All eight screenshots visually reviewed; FAQ answer and paid-section heading are DOM-only in the new capture and explicitly labelled.",
+  "local_links_checked": 133,
+  "default_node": "v25.8.1",
+  "rea_node": "v24.21.0"
+}

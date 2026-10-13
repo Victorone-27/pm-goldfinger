@@ -6,11 +6,11 @@ An AI toolkit for product managers, built around traceable examples and practica
 
 ## 当前状态
 
-M0、M1、M2、M4 已通过。产品拆解已补充“30 秒速读”；三例为宜家中国、秘塔 AI 搜索、少数派。M3 小红书口碑暂缓，等用户准备账号。M4.5 的 [rea 学习笔记](docs/rea-study.md)已通过，项目内安装与[宜家单页技术透视试点](docs/rea/ikea-pilot/report.md)已完成，待用户验收；另两例的技术透视及通用流程/模板扩展尚未开始。截图改版待 M5。
+M0、M1、M2、M4 已通过。M3 小红书口碑暂缓，等用户准备账号。M4.5 的 [rea 学习笔记](docs/rea-study.md)与[宜家试点](docs/rea/ikea-pilot/report.md)已通过；宜家、秘塔、少数派三例均已补技术透视，Skill 与模板已接入，现交 [M4.5 整体验收](docs/m4.5-validation.md)。截图改版待 M5。
 
 | 工具 | 用途 | 状态 |
 | --- | --- | --- |
-| [产品拆解](skills/teardown/) | 从公开网页或截图生成有依据的产品分析 | M4 已通过 · 含 30 秒速读；M4.5 宜家技术透视试点待验收 |
+| [产品拆解](skills/teardown/) | 从公开网页或截图生成产品分析，网页可附技术证据 | M4 已通过 · 含 30 秒速读；M4.5 三例技术透视待整体验收 |
 | [截图改版](skills/redesign/) | 从体验问题形成改前、改后可点击原型 | 开发中 · M5 |
 | [说人话](skills/plain-talk/) | 面向老板、HR 和研发改写，保持事实与口径 | M2 已通过 |
 | [竞品周报](agents/competitor-weekly/) | 对比 App Store 更新，后续增加小红书口碑变化 | M1 已通过；M3 暂缓，等用户准备账号 |
@@ -70,11 +70,13 @@ bash scripts/install_skills.sh --uninstall
 
 也可用 `$teardown`（Codex）或 `/teardown`（Claude Code）显式调用。网页由宿主实际浏览并截图；App 需要提供截图或录屏。输出先给“30 秒速读”（最好的一点、最大的问题、先改什么），再给一页摘要，含功能地图、核心路径、商业模式、3 个具体 AI 机会点；提供目标岗位时再加面试准备。速读不带来源标记，下方正文每条结论区分截图、公开资料与推断。
 
-真实示例：[宜家中国](skills/teardown/examples/01-ikea.md) · [秘塔 AI 搜索](skills/teardown/examples/02-metaso.md) · [少数派](skills/teardown/examples/03-sspai.md)；[逐项证据与截图](skills/teardown/examples/sources.md)。少数派单列 PRIME 入口与免费/付费边界。功能使用宿主能力，不新增模型 API、账号或依赖；遇核心登录阻塞就停下说明。
+真实示例：[宜家中国](skills/teardown/examples/01-ikea.md) · [秘塔 AI 搜索](skills/teardown/examples/02-metaso.md) · [少数派](skills/teardown/examples/03-sspai.md)；[产品证据与截图](skills/teardown/examples/sources.md) · [新增技术证据](docs/rea/technical/sources.md)。少数派单列 PRIME 入口与免费/付费边界。产品分析使用宿主能力，不单独调用模型 API；网页技术观察另需下述 rea 与独立浏览器，遇核心登录阻塞就停下说明。
 
 [流程与自检](skills/teardown/SKILL.md) · [M4 验证记录](docs/m4-validation.md)。这里的建议是待验证的方案，不是已取得的产品效果。
 
-技术透视正在试点：[宜家首页报告](docs/rea/ikea-pilot/report.md)将页面现象与加载脚本、观察窗口内的请求关联，并明确哪些服务或调用方式尚未确认。rea 6.4.0 使用项目内独立 Node 24.21.0，系统默认 Node 25 保留；[安装与验证记录](docs/rea-installation.md)说明 MCP 配置、独立浏览器及清理结果，也记录一次通用窗口选择器误读日常窗口的偏差。当前 MCP 直接协议调用已通过，Codex 当前会话原生重连尚未验证。此依赖不由 Skill 安装脚本自动安装。
+技术透视将页面现象与加载脚本、观察窗口内的请求关联，逐条区分观察、推断与未知。秘塔实测初问/追问都请求同源 `/api/search/chat`，返回 `text/event-stream` 并持续接收数据；这能解释浏览器看到的调用方式，不能揭示服务端用了哪家模型。少数派补充统计、会员/内容接口线索，并保留公开内容与付费墙的边界。
+
+rea 6.4.0 使用项目内独立 Node 24.21.0，系统默认 Node 25 保留。[最初安装记录](docs/rea-installation.md)保留宜家试点的窗口误读偏差；后续已改用不同程序 Chrome for Testing，并加入[隔离启动与核验脚本](skills/teardown/scripts/isolated_browser.py)。禁止通用窗口/无障碍工具；只通过核验的 127.0.0.1 端口操作，用后关闭并删除 profile。详见[当前流程](skills/teardown/references/technical-observation.md)与[整体验证](docs/m4.5-validation.md)。实际 MCP 协议调用通过，当前聊天原生 MCP 重连尚未验证。依赖不由 Skill 安装脚本自动安装。
 
 ## 开发顺序
 

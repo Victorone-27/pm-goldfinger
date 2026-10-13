@@ -1,0 +1,1082 @@
+{
+  "kind": "host_cdp_metadata_summary",
+  "collection": "Playwright CDP session through verified Chrome for Testing endpoint; not REA Evidence",
+  "questions": [
+    {
+      "text": "2025年诺贝尔物理学奖授予了谁？请提供诺贝尔奖官网来源。",
+      "submitted_at": "2026-10-13T10:48:55.987Z"
+    },
+    {
+      "text": "请只依据上述官方来源，用普通人能听懂的话解释获奖发现，并保留出处。",
+      "submitted_at": "2026-10-13T10:50:42.554Z"
+    }
+  ],
+  "records": [
+    {
+      "question": 1,
+      "url": "https://metaso.cn/api/search/chat",
+      "method": "POST",
+      "resource_type": "Fetch",
+      "status": 200,
+      "mime_type": "text/event-stream",
+      "protocol": "http/1.1",
+      "started_at": "2026-10-13T10:48:56.023Z",
+      "request_timestamp": 116194.773809,
+      "response_timestamp": 116194.874353,
+      "data_received_count": 39,
+      "first_data_timestamp": 116194.889779,
+      "last_data_timestamp": 116206.041727,
+      "data_span_seconds": 11.15194799999881,
+      "chunks": [
+        {
+          "timestamp": 116194.889779,
+          "length": 142,
+          "encoded_length": 164
+        },
+        {
+          "timestamp": 116194.906741,
+          "length": 75,
+          "encoded_length": 0
+        },
+        {
+          "timestamp": 116195.574804,
+          "length": 27,
+          "encoded_length": 124
+        },
+        {
+          "timestamp": 116195.862401,
+          "length": 294,
+          "encoded_length": 306
+        },
+        {
+          "timestamp": 116196.271649,
+          "length": 27,
+          "encoded_length": 38
+        },
+        {
+          "timestamp": 116196.327039,
+          "length": 268,
+          "encoded_length": 275
+        },
+        {
+          "timestamp": 116196.328881,
+          "length": 2,
+          "encoded_length": 7
+        },
+        {
+          "timestamp": 116197.093526,
+          "length": 27,
+          "encoded_length": 33
+        },
+        {
+          "timestamp": 116197.710528,
+          "length": 27,
+          "encoded_length": 38
+        },
+        {
+          "timestamp": 116198.435975,
+          "length": 27,
+          "encoded_length": 43
+        },
+        {
+          "timestamp": 116199.072521,
+          "length": 27,
+          "encoded_length": 38
+        },
+        {
+          "timestamp": 116199.862361,
+          "length": 27,
+          "encoded_length": 33
+        },
+        {
+          "timestamp": 116200.57746,
+          "length": 27,
+          "encoded_length": 38
+        },
+        {
+          "timestamp": 116201.29486,
+          "length": 27,
+          "encoded_length": 38
+        },
+        {
+          "timestamp": 116201.885959,
+          "length": 27,
+          "encoded_length": 33
+        },
+        {
+          "timestamp": 116202.52378,
+          "length": 353,
+          "encoded_length": 365
+        },
+        {
+          "timestamp": 116202.535404,
+          "length": 2009,
+          "encoded_length": 2086
+        },
+        {
+          "timestamp": 116202.54988,
+          "length": 725,
+          "encoded_length": 0
+        },
+        {
+          "timestamp": 116202.583743,
+          "length": 27,
+          "encoded_length": 777
+        },
+        {
+          "timestamp": 116203.345702,
+          "length": 27,
+          "encoded_length": 38
+        },
+        {
+          "timestamp": 116204.058226,
+          "length": 27,
+          "encoded_length": 38
+        },
+        {
+          "timestamp": 116204.684219,
+          "length": 27,
+          "encoded_length": 38
+        },
+        {
+          "timestamp": 116204.861065,
+          "length": 5,
+          "encoded_length": 10
+        },
+        {
+          "timestamp": 116204.862928,
+          "length": 676,
+          "encoded_length": 689
+        },
+        {
+          "timestamp": 116205.284613,
+          "length": 213,
+          "encoded_length": 224
+        },
+        {
+          "timestamp": 116205.29567,
+          "length": 782,
+          "encoded_length": 811
+        },
+        {
+          "timestamp": 116205.386767,
+          "length": 27,
+          "encoded_length": 33
+        },
+        {
+          "timestamp": 116205.46777,
+          "length": 238,
+          "encoded_length": 244
+        },
+        {
+          "timestamp": 116205.47517,
+          "length": 213,
+          "encoded_length": 219
+        },
+        {
+          "timestamp": 116205.481134,
+          "length": 529,
+          "encoded_length": 542
+        },
+        {
+          "timestamp": 116205.500907,
+          "length": 334,
+          "encoded_length": 341
+        },
+        {
+          "timestamp": 116205.508025,
+          "length": 213,
+          "encoded_length": 219
+        },
+        {
+          "timestamp": 116205.911118,
+          "length": 218,
+          "encoded_length": 229
+        },
+        {
+          "timestamp": 116205.921265,
+          "length": 4722,
+          "encoded_length": 4737
+        },
+        {
+          "timestamp": 116205.926742,
+          "length": 3872,
+          "encoded_length": 0
+        },
+        {
+          "timestamp": 116205.935753,
+          "length": 16384,
+          "encoded_length": 20271
+        },
+        {
+          "timestamp": 116205.93799,
+          "length": 2261,
+          "encoded_length": 2268
+        },
+        {
+          "timestamp": 116205.957228,
+          "length": 4040,
+          "encoded_length": 4047
+        },
+        {
+          "timestamp": 116206.041727,
+          "length": 13,
+          "encoded_length": 18
+        }
+      ],
+      "loading_finished_observed": false,
+      "loading_failed": true,
+      "termination_error": "net::ERR_ABORTED",
+      "sse_event_source_messages": 0
+    },
+    {
+      "question": 2,
+      "url": "https://metaso.cn/api/search/chat",
+      "method": "POST",
+      "resource_type": "Fetch",
+      "status": 200,
+      "mime_type": "text/event-stream",
+      "protocol": "http/1.1",
+      "started_at": "2026-10-13T10:50:42.580Z",
+      "request_timestamp": 116301.331149,
+      "response_timestamp": 116301.431336,
+      "data_received_count": 26,
+      "first_data_timestamp": 116301.448638,
+      "last_data_timestamp": 116307.174955,
+      "data_span_seconds": 5.726316999993287,
+      "chunks": [
+        {
+          "timestamp": 116301.448638,
+          "length": 146,
+          "encoded_length": 158
+        },
+        {
+          "timestamp": 116302.101832,
+          "length": 27,
+          "encoded_length": 33
+        },
+        {
+          "timestamp": 116302.876863,
+          "length": 27,
+          "encoded_length": 33
+        },
+        {
+          "timestamp": 116303.49781,
+          "length": 27,
+          "encoded_length": 33
+        },
+        {
+          "timestamp": 116304.30987,
+          "length": 27,
+          "encoded_length": 33
+        },
+        {
+          "timestamp": 116304.674624,
+          "length": 406,
+          "encoded_length": 413
+        },
+        {
+          "timestamp": 116304.709732,
+          "length": 257,
+          "encoded_length": 264
+        },
+        {
+          "timestamp": 116304.726153,
+          "length": 851,
+          "encoded_length": 875
+        },
+        {
+          "timestamp": 116304.741976,
+          "length": 667,
+          "encoded_length": 695
+        },
+        {
+          "timestamp": 116304.899365,
+          "length": 27,
+          "encoded_length": 33
+        },
+        {
+          "timestamp": 116305.074631,
+          "length": 260,
+          "encoded_length": 267
+        },
+        {
+          "timestamp": 116305.091313,
+          "length": 756,
+          "encoded_length": 769
+        },
+        {
+          "timestamp": 116305.263048,
+          "length": 711,
+          "encoded_length": 730
+        },
+        {
+          "timestamp": 116305.599142,
+          "length": 27,
+          "encoded_length": 33
+        },
+        {
+          "timestamp": 116306.255054,
+          "length": 474,
+          "encoded_length": 487
+        },
+        {
+          "timestamp": 116306.273067,
+          "length": 1336,
+          "encoded_length": 1372
+        },
+        {
+          "timestamp": 116306.301798,
+          "length": 27,
+          "encoded_length": 33
+        },
+        {
+          "timestamp": 116306.54632,
+          "length": 634,
+          "encoded_length": 652
+        },
+        {
+          "timestamp": 116306.982677,
+          "length": 213,
+          "encoded_length": 219
+        },
+        {
+          "timestamp": 116307.005655,
+          "length": 875,
+          "encoded_length": 905
+        },
+        {
+          "timestamp": 116307.02543,
+          "length": 212,
+          "encoded_length": 218
+        },
+        {
+          "timestamp": 116307.028522,
+          "length": 428,
+          "encoded_length": 445
+        },
+        {
+          "timestamp": 116307.140067,
+          "length": 326,
+          "encoded_length": 333
+        },
+        {
+          "timestamp": 116307.141988,
+          "length": 2,
+          "encoded_length": 7
+        },
+        {
+          "timestamp": 116307.157324,
+          "length": 646,
+          "encoded_length": 679
+        },
+        {
+          "timestamp": 116307.174955,
+          "length": 13,
+          "encoded_length": 18
+        }
+      ],
+      "loading_finished_observed": false,
+      "loading_failed": true,
+      "termination_error": "net::ERR_ABORTED",
+      "sse_event_source_messages": 0
+    }
+  ],
+  "ui_length_samples": {
+    "initial": [
+      {
+        "at": "2026-10-13T10:48:55.659Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 158
+      },
+      {
+        "at": "2026-10-13T10:48:56.159Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 158
+      },
+      {
+        "at": "2026-10-13T10:48:56.662Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 59
+      },
+      {
+        "at": "2026-10-13T10:48:57.162Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 81
+      },
+      {
+        "at": "2026-10-13T10:48:57.665Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 91
+      },
+      {
+        "at": "2026-10-13T10:48:58.166Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 91
+      },
+      {
+        "at": "2026-10-13T10:48:58.669Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 91
+      },
+      {
+        "at": "2026-10-13T10:48:59.171Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 91
+      },
+      {
+        "at": "2026-10-13T10:48:59.672Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 91
+      },
+      {
+        "at": "2026-10-13T10:49:00.173Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 91
+      },
+      {
+        "at": "2026-10-13T10:49:00.674Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 91
+      },
+      {
+        "at": "2026-10-13T10:49:01.175Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 91
+      },
+      {
+        "at": "2026-10-13T10:49:01.677Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 91
+      },
+      {
+        "at": "2026-10-13T10:49:02.177Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 91
+      },
+      {
+        "at": "2026-10-13T10:49:02.680Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 91
+      },
+      {
+        "at": "2026-10-13T10:49:03.181Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 91
+      },
+      {
+        "at": "2026-10-13T10:49:03.683Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 91
+      },
+      {
+        "at": "2026-10-13T10:49:04.185Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 188
+      },
+      {
+        "at": "2026-10-13T10:49:04.686Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 229
+      },
+      {
+        "at": "2026-10-13T10:49:05.187Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 229
+      },
+      {
+        "at": "2026-10-13T10:49:05.689Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 229
+      },
+      {
+        "at": "2026-10-13T10:49:06.191Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 229
+      },
+      {
+        "at": "2026-10-13T10:49:06.693Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 325
+      },
+      {
+        "at": "2026-10-13T10:49:07.194Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 327
+      },
+      {
+        "at": "2026-10-13T10:49:07.696Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:08.198Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:08.700Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:09.203Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:09.705Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:10.207Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:10.708Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:11.210Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:11.712Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:12.212Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:12.713Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:13.216Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:13.716Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:14.215Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:14.718Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:15.219Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:15.719Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:16.221Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:16.723Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:17.225Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:17.727Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:18.230Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:18.731Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:19.233Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:19.735Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:20.236Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:20.737Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:21.239Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:21.740Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:22.240Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:22.742Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:23.244Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:23.747Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:24.249Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:24.750Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:25.251Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:25.752Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:26.254Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:26.757Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:27.258Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:27.759Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:28.260Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:28.762Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:29.261Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:29.763Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:30.266Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:30.768Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:31.269Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:31.769Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:32.271Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:32.772Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:33.274Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:33.776Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:34.278Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:34.779Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:35.281Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:35.784Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:36.285Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:36.785Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:37.286Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:37.787Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:38.287Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:38.787Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:39.289Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:39.790Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:40.290Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:40.791Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:41.293Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:41.793Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:42.294Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:42.795Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:43.297Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:49:43.797Z",
+        "stage": "metaso-initial-submit",
+        "body_chars": 926
+      }
+    ],
+    "followup": [
+      {
+        "at": "2026-10-13T10:50:42.226Z",
+        "body_chars": 926
+      },
+      {
+        "at": "2026-10-13T10:50:42.726Z",
+        "body_chars": 937
+      },
+      {
+        "at": "2026-10-13T10:50:43.228Z",
+        "body_chars": 937
+      },
+      {
+        "at": "2026-10-13T10:50:43.728Z",
+        "body_chars": 937
+      },
+      {
+        "at": "2026-10-13T10:50:44.229Z",
+        "body_chars": 937
+      },
+      {
+        "at": "2026-10-13T10:50:44.730Z",
+        "body_chars": 937
+      },
+      {
+        "at": "2026-10-13T10:50:45.231Z",
+        "body_chars": 937
+      },
+      {
+        "at": "2026-10-13T10:50:45.732Z",
+        "body_chars": 937
+      },
+      {
+        "at": "2026-10-13T10:50:46.233Z",
+        "body_chars": 1019
+      },
+      {
+        "at": "2026-10-13T10:50:46.735Z",
+        "body_chars": 1031
+      },
+      {
+        "at": "2026-10-13T10:50:47.235Z",
+        "body_chars": 1182
+      },
+      {
+        "at": "2026-10-13T10:50:47.737Z",
+        "body_chars": 1182
+      },
+      {
+        "at": "2026-10-13T10:50:48.236Z",
+        "body_chars": 1201
+      },
+      {
+        "at": "2026-10-13T10:50:48.737Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:50:49.238Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:50:49.738Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:50:50.240Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:50:50.741Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:50:51.241Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:50:51.743Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:50:52.244Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:50:52.745Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:50:53.246Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:50:53.747Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:50:54.248Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:50:54.749Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:50:55.250Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:50:55.751Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:50:56.252Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:50:56.754Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:50:57.255Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:50:57.756Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:50:58.257Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:50:58.758Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:50:59.258Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:50:59.759Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:51:00.260Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:51:00.762Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:51:01.263Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:51:01.763Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:51:02.263Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:51:02.764Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:51:03.265Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:51:03.766Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:51:04.267Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:51:04.768Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:51:05.269Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:51:05.770Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:51:06.271Z",
+        "body_chars": 1499
+      },
+      {
+        "at": "2026-10-13T10:51:06.772Z",
+        "body_chars": 1499
+      }
+    ]
+  },
+  "limits": [
+    "No request headers, cookies, request bodies, response bodies or SSE payload text retained.",
+    "dataReceived count is a transport observation, not a token count or SSE message count.",
+    "Both streams ended with net::ERR_ABORTED in CDP, while final answers were visible. The termination cause was not verified.",
+    "Phase labels from the initial temporary recorder were discarded; questions are aligned by request timestamps."
+  ]
+}

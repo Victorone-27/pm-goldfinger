@@ -1,0 +1,130 @@
+[
+  {
+    "file": "../../assets/teardown-technical/metaso-technical-home.png",
+    "source_evidence_id": "ev_a605985d9af98532f2871be0a211622ec2304dfe9771e3aa759e8f268355b352",
+    "captured_at": "2026-10-13T10:47:09.336Z",
+    "sha256": "95c20c3e1c6cb21cf4254f60ed4510fd6a587c083d827bab135fa0cb121bd7de",
+    "viewport": {
+      "width": 1440,
+      "height": 857
+    },
+    "original_sha256": "fab81590fdc3c2ad57ed399ad2fc7648ce077e226e66a237f56fc56ac36a2350",
+    "rendition": "attributed_display_copy_not_original_capture",
+    "display_size": [
+      1440,
+      944
+    ]
+  },
+  {
+    "file": "../../assets/teardown-technical/metaso-technical-answer.png",
+    "source_evidence_id": "ev_f0df59d53112476c4a75dc674a6a445aab736c15bbb9c7360aa227bbcbc09e18",
+    "captured_at": "2026-10-13T10:49:44.302Z",
+    "sha256": "9fbd1c9a9fba255b5b13bbd396bad474562a1f722984cbb19f769c43ae637d02",
+    "viewport": {
+      "width": 1440,
+      "height": 857
+    },
+    "original_sha256": "a7fead685272a623e0d165c69de13c543f8742417d8880bfdbfc4cd252e4034a",
+    "rendition": "attributed_display_copy_not_original_capture",
+    "display_size": [
+      1440,
+      944
+    ]
+  },
+  {
+    "file": "../../assets/teardown-technical/metaso-technical-followup.png",
+    "source_evidence_id": "ev_3285313856d1fa7e136771a05724fd245c930474017919e7b41223970860a646",
+    "captured_at": "2026-10-13T10:51:07.129Z",
+    "sha256": "6a06681b8dba9a79e72f66847fb83d44abe391681b703468da3ee82ab741e14e",
+    "viewport": {
+      "width": 1440,
+      "height": 857
+    },
+    "original_sha256": "6ccbc700bf541a02422e6de24fc7b5af1c1af823856c284d42c283b2f3b5181a",
+    "rendition": "attributed_display_copy_not_original_capture",
+    "display_size": [
+      1440,
+      944
+    ]
+  },
+  {
+    "file": "../../assets/teardown-technical/sspai-technical-home.png",
+    "source_evidence_id": "ev_cd433fb726041fc6659161d7c71bbdbd1eeeae43a41a7d31afe29eddd66975db",
+    "captured_at": "2026-10-13T10:52:55.598Z",
+    "sha256": "1927d9a381f2273b92f95c5071e9d79138476553b934d69a2d5738dedf796eba",
+    "viewport": {
+      "width": 1440,
+      "height": 857
+    },
+    "original_sha256": "3f11446f20816b4e11e180798e23ecb75afbfe679b18453b06ceb3bb231d8b46",
+    "rendition": "attributed_display_copy_not_original_capture",
+    "display_size": [
+      1440,
+      944
+    ]
+  },
+  {
+    "file": "../../assets/teardown-technical/sspai-technical-prime.png",
+    "source_evidence_id": "ev_7f46685aecc549ca3a8a1ce44f3ea693cf5695a266f570bc2a66859336e01b69",
+    "captured_at": "2026-10-13T10:54:07.707Z",
+    "sha256": "1ebf0d79e404ec72f9c678bebca7a06865c644421db58f6708b719462a2df193",
+    "viewport": {
+      "width": 1440,
+      "height": 857
+    },
+    "original_sha256": "1e3e769a461c66d3d4ebceb480995ff717168456baf40ffca55b2d813eef2d5d",
+    "rendition": "attributed_display_copy_not_original_capture",
+    "display_size": [
+      1440,
+      944
+    ]
+  },
+  {
+    "file": "../../assets/teardown-technical/sspai-technical-faq.png",
+    "source_evidence_id": "ev_f8dc8cf251902f7004bccd65f43802e6cba4ef9d24b5781898db291f398cd17d",
+    "captured_at": "2026-10-13T10:54:07.912Z",
+    "sha256": "2b178f93abfa2a95be073776472ae503ec1359e30b25ef1c4ff98d7cc78a41e9",
+    "viewport": {
+      "width": 1440,
+      "height": 857
+    },
+    "original_sha256": "0197cbf7c594d8dbc9dbe3848a8eec1353b06308a255fa9c23518971f12c04d0",
+    "rendition": "attributed_display_copy_not_original_capture",
+    "display_size": [
+      1440,
+      944
+    ]
+  },
+  {
+    "file": "../../assets/teardown-technical/sspai-technical-directory.png",
+    "source_evidence_id": "ev_27ed1bf8c46c27ee99f9d98106ce42f300f6c02026860c91c2f2c4a696ab877e",
+    "captured_at": "2026-10-13T10:55:10.025Z",
+    "sha256": "2277a0a3b0ce72daa0b496fc3fbdc2d08c772569207adae21d997ef0ed5551f9",
+    "viewport": {
+      "width": 1440,
+      "height": 857
+    },
+    "original_sha256": "0d30c3fe6d599a145cd2313d77a60b1fa8a68571ba9fa2efb789a6d51c03b0b0",
+    "rendition": "attributed_display_copy_not_original_capture",
+    "display_size": [
+      1440,
+      944
+    ]
+  },
+  {
+    "file": "../../assets/teardown-technical/sspai-technical-paywall.png",
+    "source_evidence_id": "ev_8aadedfbc1d49f821de1bcec9d799db0ba19c1116035601e9892de32029ae14d",
+    "captured_at": "2026-10-13T10:56:23.547Z",
+    "sha256": "8165ff356c5d12442660dc8b5eec84fe81ab743e33dd69abf1e0cd14b205ead0",
+    "viewport": {
+      "width": 1440,
+      "height": 857
+    },
+    "original_sha256": "4e5ddc1aa0459c2428bbc1f94a74b65cf9e01616ae7b67850ed5603188509fe3",
+    "rendition": "attributed_display_copy_not_original_capture",
+    "display_size": [
+      1440,
+      944
+    ]
+  }
+]

@@ -31,6 +31,25 @@
 
 【推断】API 是向开发者提供能力的候选商业方向，但仅凭入口无法确认是否收费、计费方式或收入结构；本报告不将其写成已验证的订阅模式。〔M1〕
 
+## 技术透视
+
+2026-10-13 补测：Chrome for Testing 全新未登录配置，首页 → 原问题初答 → 同一追问。只提交一组问题/追问；请求正文、响应正文和凭据不进入技术证据。[补测证据附录](../../../docs/rea/technical/sources.md#mt1)
+
+| 服务 / 实现线索 | 直接证据 | 判断与边界 |
+| --- | --- | --- |
+| AI 回答入口 | 【观察】初问与追问均为 `POST https://metaso.cn/api/search/chat`，状态 200，MIME 为 `text/event-stream`。追问同时被 rea 与宿主 CDP 采到。〔[MT2](../../../docs/rea/technical/sources.md#mt2)、[MT3](../../../docs/rea/technical/sources.md#mt3)〕 | 【观察】浏览器请求发往秘塔同源服务；服务器内部是否再转发、调用哪家模型、是否自研，均未确认。 |
+| 事件上报线索 | 【观察】追问窗口出现 `POST metaso.cn/admin/user/event_report`，200 / JSON。〔MT3〕 | 【推断】路径显示事件上报用途；没有保留 payload，不能确认事件字段、采集范围或第三方分析商。 |
+| 登录 / 验证组件 | 【观察】加载 `res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js` 和 `o.alicdn.com/captcha-frontend/aliyunFP/fp.min.js`。〔[MT1](../../../docs/rea/technical/sources.md#mt1)〕 | 【推断】分别为微信登录、验证码相关线索；本次未登录、未触发验证，也未测这些组件的具体配置。 |
+| 静态资源 | 【观察】脚本来自 `static-1.metaso.cn`，包括 `_next/static/chunks/main-app-56a5f76b4d05b4e6.js`。〔MT1〕 | 【观察】可确认资源路径；路径命名不足以确定完整架构、物理 CDN 服务商或模型厂商。 |
+
+**AI 调用方式：**【观察】初答连续收到 39 次非空 `Network.dataReceived`，首末数据跨度约 **11.152 秒**；追问为 26 次、约 **5.726 秒**，两次响应类型均为 `text/event-stream`。这支持浏览器接收持续事件流的结论，不只是界面打字动画。次数是网络数据事件数，不是 token 数或 SSE 消息数；时间也不是完整生成耗时。〔MT2–MT3〕
+
+【观察】两次连接结束时 CDP 均记为 `net::ERR_ABORTED`，未收到正常 loading-finished 事件；页面随后有可见回答。本次未确认终止原因，不将其解释成服务端故障，也不声称连接正常结束。〔MT2–MT3〕
+
+**这些技术选择对产品意味着什么：**【推断】同源入口让前端围绕一条产品接口组织回答，持续数据有条件支持“检索中 / 回答中”的等待反馈；应先验证首段内容和来源何时出现，再评价等待体验，不能由协议直接得出成本或速度优势。〔MT2–MT3〕
+
+支付、客服和服务器内部调用未进入此次采集范围。截图与请求证据分别支持界面和网络结论，不由回答中的品牌或文字猜模型。
+
 ## 3 个 AI 机会点
 
 以下均为拟议实验，尚未实施。

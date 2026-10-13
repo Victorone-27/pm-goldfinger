@@ -37,6 +37,22 @@
 
 【推断】栏目单买与 PRIME 是本次能确认的两种内容收费入口，免费文章/试读帮助读者判断价值；权益散落在目录、付费墙与 FAQ，可能增加方案比较成本。未测转化或收入占比。〔S2–S7〕
 
+## 技术透视
+
+2026-10-13 补测：Chrome for Testing 全新未登录配置，首页 → 免费《派评》；另从 PRIME 入口查看权益与 FAQ，复核原栏目目录及付费预览页，止于订阅/登录之前。[补测证据附录](../../../docs/rea/technical/sources.md#st1)
+
+| 服务 / 实现线索 | 直接证据 | 判断与边界 |
+| --- | --- | --- |
+| Google 分析相关 | 【观察】加载 `www.googletagmanager.com/gtag/js`；PRIME 与付费预览阶段均有 `POST www.google-analytics.com/g/collect`，返回 204。〔[ST1–ST3](../../../docs/rea/technical/sources.md#st1)、[D1](../../../docs/rea/technical/sources.md#d1)〕 | 【观察】已经看到实际分析端点请求；不保留参数和 payload，不能确定事件名称、归因配置或采集的具体信息。 |
+| 百度统计线索 | 【观察】加载 `hm.baidu.com/hm.js`，同时有 `hm.baidu.com/hm.gif` 的 200 响应。〔ST1–ST3、[D2](../../../docs/rea/technical/sources.md#d2)〕 | 【推断】为百度统计相关接入；具体指标与配置未核实。 |
+| 会员与内容接口 | 【观察】PRIME 页请求 `sspai.com/api/v2/member/single/info/get`；付费预览请求 `/api/v1/article/info/get`、`/api/v1/series/info/get`，均 200 / JSON。〔[ST2](../../../docs/rea/technical/sources.md#st2)、[ST3](../../../docs/rea/technical/sources.md#st3)〕 | 【观察】可确认浏览器向同源接口取数据；没有读取响应正文，不能据此判断具体权益字段或权限在何处校验。 |
+| 资源 / 微信组件 | 【观察】资源来自 `post.sspai.com`、`cdn-static.sspai.com`，页面加载 `res.wx.qq.com/open/js/jweixin-1.4.0.js`。〔ST1、ST3〕 | 【推断】存在微信网页集成线索；不证明支付已启用，也不确定物理 CDN 供应商。 |
+| AI / 支付 / 客服 | 【观察】此次范围止于公开阅读、套餐说明及付费墙，未触发 AI 对话、结算或客服会话。〔ST1–ST3〕 | 模型厂商、AI 调用方式、支付和客服服务商均未确认；页面谈论 AI 不等于页面调用了 AI。 |
+
+【观察】补测仍看到全局 PRIME 导航、PRIME 首屏“立即加入”和套餐区“加入会员”；目录区分免费试读与付费内容，预览墙并列“年付会员免费”和栏目“立即订阅”。展开 FAQ 后明确月付不含会员栏目畅读。〔ST2–ST3〕
+
+**这些技术选择对产品意味着什么：**【推断】公开会员/栏目接口与统计请求说明前端已有相关数据交互线索；可以先核实权益字段和事件口径，让目录、付费墙、套餐区用同一套规则回答“这个栏目能否读”，再评估是否减少理解错误。本次没有证明现有系统已统一口径。〔ST2–ST3〕
+
 ## 3 个 AI 机会点
 
 以下均为拟议实验，尚未实施。

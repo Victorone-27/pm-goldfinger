@@ -1,0 +1,13 @@
+{
+  "program": "Chrome for Testing",
+  "version": "155.0.8059.39",
+  "bundle_id": "com.google.chrome.for.testing",
+  "binary": ".local/rea/browsers/155.0.8059.39/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+  "source": "https://storage.googleapis.com/chrome-for-testing-public/155.0.8059.39/mac-arm64/chrome-mac-arm64.zip",
+  "archive_sha256": "529a71bd61aaa2ef266a4d4bd300ae9572ba6a3468a8d55c3023ffeffb5b6b4e",
+  "hash_note": "Local downloaded archive checksum, not an upstream-published checksum",
+  "codesign_verify_exit": 1,
+  "codesign_verify_output": ".local/rea/browsers/155.0.8059.39/chrome-mac-arm64/Google Chrome for Testing.app: code has no resources but signature indicates they must be present",
+  "signature_note": "Official Chrome for Testing archive contains an ad-hoc linker-signed executable and no app resource seal; codesign verification did not pass. Archive CRC check passed; no signature or security setting was modified.",
+  "archive_crc_check": "passed"
+}
