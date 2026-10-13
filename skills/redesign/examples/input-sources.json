@@ -7,21 +7,13 @@
         "repo_path": "docs/assets/teardown-technical/ikea-scrolled.png",
         "sha256": "d33c9b506afb9427f407e55d657e52a816b3a21f6a818dac0ddb12f8afc8ba16",
         "original_sha256": "42b35b817134bdcc08975a32906a23b8229c7ecd34e7f7102255cf1ba1981f1a",
-        "rendition": "attributed_display_copy_not_original_capture",
-        "display_size": [
-          2400,
-          1556
-        ]
+        "rendition": "attributed_display_copy_not_original_capture"
       },
       {
         "repo_path": "docs/assets/teardown-technical/ikea-home.png",
         "sha256": "969940607caeab565d1e0db60fdfe78b96100232075145aee2a2947686539667",
         "original_sha256": "d4825fe4c64a6f23cbad845c0b88c6d780eb66da0134f5d494e3521c2278b5ce",
-        "rendition": "attributed_display_copy_not_original_capture",
-        "display_size": [
-          2400,
-          1556
-        ]
+        "rendition": "attributed_display_copy_not_original_capture"
       }
     ],
     "02-metaso": [
@@ -29,31 +21,19 @@
         "repo_path": "docs/assets/teardown-technical/metaso-technical-followup.png",
         "sha256": "6a06681b8dba9a79e72f66847fb83d44abe391681b703468da3ee82ab741e14e",
         "original_sha256": "6ccbc700bf541a02422e6de24fc7b5af1c1af823856c284d42c283b2f3b5181a",
-        "rendition": "attributed_display_copy_not_original_capture",
-        "display_size": [
-          1440,
-          944
-        ]
+        "rendition": "attributed_display_copy_not_original_capture"
       },
       {
         "repo_path": "docs/assets/teardown-technical/metaso-technical-answer.png",
         "sha256": "9fbd1c9a9fba255b5b13bbd396bad474562a1f722984cbb19f769c43ae637d02",
         "original_sha256": "a7fead685272a623e0d165c69de13c543f8742417d8880bfdbfc4cd252e4034a",
-        "rendition": "attributed_display_copy_not_original_capture",
-        "display_size": [
-          1440,
-          944
-        ]
+        "rendition": "attributed_display_copy_not_original_capture"
       },
       {
         "repo_path": "docs/assets/teardown/metaso-source-open.jpg",
         "sha256": "e4b6353ac7d7ab3681e4abd331c2874552b0cb1e3b44d55b21fe10197a26af28",
         "original_sha256": "006a7c6203c28e55c8b0153e8ab3bedbcb4ff17c2fa0199e8274aa7ff5df44fe",
-        "rendition": "attributed_display_copy_not_original_capture",
-        "display_size": [
-          1280,
-          798
-        ]
+        "rendition": "attributed_display_copy_not_original_capture"
       }
     ],
     "03-sspai": [
@@ -61,42 +41,27 @@
         "repo_path": "docs/assets/teardown/sspai-prime-plans.jpg",
         "sha256": "523dcda9859aaf1e048d7ccf52b9d935093eb6ee30e9a3f8383637dea2194c97",
         "original_sha256": "af3dd3b68e0767a71bc9810f23ffa217d9579bd26ea081daafdc1d8c89504a36",
-        "rendition": "attributed_display_copy_not_original_capture",
-        "display_size": [
-          1280,
-          798
-        ]
+        "rendition": "attributed_display_copy_not_original_capture"
       },
       {
         "repo_path": "docs/assets/teardown/sspai-prime-faq.jpg",
         "sha256": "74b18937eb672dffa07608d91a22a28f7a8a6b3ef78e49afc35990e56a8e7ba8",
         "original_sha256": "c01816732a4ba9da78cac774bd31a9ce4bf75ab058f3ba705c478fb4b1d14218",
-        "rendition": "attributed_display_copy_not_original_capture",
-        "display_size": [
-          1280,
-          798
-        ]
+        "rendition": "attributed_display_copy_not_original_capture"
       },
       {
         "repo_path": "docs/assets/teardown/sspai-paid-series.jpg",
         "sha256": "3f8d7e9ac76a969e78a8b192c556df5ecbf2e0172327c9ce7fc64eb20d321e20",
         "original_sha256": "9b2ec4db59472240a7db88db26a54e18351459d084c89fdb7622f44836842afc",
-        "rendition": "attributed_display_copy_not_original_capture",
-        "display_size": [
-          1280,
-          798
-        ]
+        "rendition": "attributed_display_copy_not_original_capture"
       },
       {
         "repo_path": "docs/assets/teardown-technical/sspai-technical-directory.png",
         "sha256": "2277a0a3b0ce72daa0b496fc3fbdc2d08c772569207adae21d997ef0ed5551f9",
         "original_sha256": "0d30c3fe6d599a145cd2313d77a60b1fa8a68571ba9fa2efb789a6d51c03b0b0",
-        "rendition": "attributed_display_copy_not_original_capture",
-        "display_size": [
-          1440,
-          944
-        ]
+        "rendition": "attributed_display_copy_not_original_capture"
       }
     ]
-  }
+  },
+  "m6_note": "M5 输入为原始截图；M6 展示路径增加来源条与必要遮盖，原始哈希另存。"
 }

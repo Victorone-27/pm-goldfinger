@@ -1,0 +1,657 @@
+{
+  "updated_in": "M6",
+  "date": "2026-10-13",
+  "note": "经用户授权，公开历史统一保留加来源条与必要遮盖的展示副本。原始采集字节仅在仓库外的私有恢复备份中；original_sha256 不用于索引公开历史。原型与效果图使用中性示意图。",
+  "screenshots": [
+    {
+      "file": "docs/assets/teardown/ikea-filter.jpg",
+      "source": "宜家中国官网",
+      "captured_date": "2026-10-13",
+      "label": "截图来源：宜家中国官网，2026-10-13，仅用于产品分析",
+      "original_sha256": "9f2d56f60c1ae50b41a2d63421290688eed901f0cf761f759fb8234e098e5efd",
+      "sha256": "fe072c28a4840d7b063af47e1906c3614823043db504ab2a544c1933777284d0",
+      "original_size": [
+        1280,
+        720
+      ],
+      "display_size": [
+        1280,
+        798
+      ],
+      "redactions": [],
+      "rendition": "attributed_display_copy_not_original_capture"
+    },
+    {
+      "file": "docs/assets/teardown/ikea-packaging.jpg",
+      "source": "宜家中国官网",
+      "captured_date": "2026-10-13",
+      "label": "截图来源：宜家中国官网，2026-10-13，仅用于产品分析",
+      "original_sha256": "7a7b315bd90a9c424d1b0d879ad3c57947cc112355e41b5dd66af326c71ade82",
+      "sha256": "795005e496f61969b4ed371b7cad3203c7004dee1d3e3bf6c8c38348e364dd0c",
+      "original_size": [
+        1280,
+        720
+      ],
+      "display_size": [
+        1280,
+        798
+      ],
+      "redactions": [],
+      "rendition": "attributed_display_copy_not_original_capture"
+    },
+    {
+      "file": "docs/assets/teardown/ikea-product.jpg",
+      "source": "宜家中国官网",
+      "captured_date": "2026-10-13",
+      "label": "截图来源：宜家中国官网，2026-10-13，仅用于产品分析",
+      "original_sha256": "476db1edbd29c13a43ce5e149f4a11c52bbc7acfb2bb3848527ca5918a30709b",
+      "sha256": "2e8cae87c3412ec7b1e935ab3fb763b3e1966115b98c4c3d4094bfdf81c4c333",
+      "original_size": [
+        1280,
+        720
+      ],
+      "display_size": [
+        1280,
+        798
+      ],
+      "redactions": [],
+      "rendition": "attributed_display_copy_not_original_capture"
+    },
+    {
+      "file": "docs/assets/teardown/ikea-services.jpg",
+      "source": "宜家中国官网",
+      "captured_date": "2026-10-13",
+      "label": "截图来源：宜家中国官网，2026-10-13，仅用于产品分析",
+      "original_sha256": "1747d4cfe355f0e612b1114426516296e380e6bec78fe37a5d2992f4c1a6e2e2",
+      "sha256": "7ec415952a38efb69a824f262b58b84e643f9625a3e43d4c54bf303e29430abf",
+      "original_size": [
+        1280,
+        720
+      ],
+      "display_size": [
+        1280,
+        798
+      ],
+      "redactions": [],
+      "rendition": "attributed_display_copy_not_original_capture"
+    },
+    {
+      "file": "docs/assets/teardown/metaso-answer.jpg",
+      "source": "秘塔 AI 搜索官网",
+      "captured_date": "2026-10-13",
+      "label": "截图来源：秘塔 AI 搜索官网，2026-10-13，仅用于产品分析",
+      "original_sha256": "47944b4c424b96a8cf1fd96e335b3a9fb32c6b76ecbca2d94176844506fbf743",
+      "sha256": "df8b249497a11f63aac10cca23612e2970cc929478772745c8d38040af74c3f5",
+      "original_size": [
+        1280,
+        720
+      ],
+      "display_size": [
+        1280,
+        798
+      ],
+      "redactions": [],
+      "rendition": "attributed_display_copy_not_original_capture"
+    },
+    {
+      "file": "docs/assets/teardown/metaso-followup.jpg",
+      "source": "秘塔 AI 搜索官网",
+      "captured_date": "2026-10-13",
+      "label": "截图来源：秘塔 AI 搜索官网，2026-10-13，仅用于产品分析",
+      "original_sha256": "71c2ecc6eb35a4cad99c7008675656fe999baae689dfd934776dbea188a74260",
+      "sha256": "63455584f1e97e5dcc38dc274e4fa47b4d1e57509c708e69b96de351cd7f133b",
+      "original_size": [
+        1280,
+        720
+      ],
+      "display_size": [
+        1280,
+        798
+      ],
+      "redactions": [],
+      "rendition": "attributed_display_copy_not_original_capture"
+    },
+    {
+      "file": "docs/assets/teardown/metaso-home.jpg",
+      "source": "秘塔 AI 搜索官网",
+      "captured_date": "2026-10-13",
+      "label": "截图来源：秘塔 AI 搜索官网，2026-10-13，仅用于产品分析",
+      "original_sha256": "501a35d25615fae600091b6bf38a39b2ef35ebaf874c51f75a19cc13274e6f9a",
+      "sha256": "52d5f9c9e9e5ba8b5d03025d000a4c39c6fa08e11a49416c4dd08cd0c92cd39d",
+      "original_size": [
+        1280,
+        720
+      ],
+      "display_size": [
+        1280,
+        798
+      ],
+      "redactions": [],
+      "rendition": "attributed_display_copy_not_original_capture"
+    },
+    {
+      "file": "docs/assets/teardown/metaso-source-open.jpg",
+      "source": "诺贝尔奖官网",
+      "captured_date": "2026-10-13",
+      "label": "截图来源：诺贝尔奖官网，2026-10-13，仅用于产品分析",
+      "original_sha256": "006a7c6203c28e55c8b0153e8ab3bedbcb4ff17c2fa0199e8274aa7ff5df44fe",
+      "sha256": "e4b6353ac7d7ab3681e4abd331c2874552b0cb1e3b44d55b21fe10197a26af28",
+      "original_size": [
+        1280,
+        720
+      ],
+      "display_size": [
+        1280,
+        798
+      ],
+      "redactions": [],
+      "rendition": "attributed_display_copy_not_original_capture"
+    },
+    {
+      "file": "docs/assets/teardown/sspai-free-article.jpg",
+      "source": "少数派官网",
+      "captured_date": "2026-10-13",
+      "label": "截图来源：少数派官网，2026-10-13，仅用于产品分析",
+      "original_sha256": "335fdb42307a65bc93e8c7f620eaa271ec90c08872031862a5094a609f4b2c5c",
+      "sha256": "f8a3d275873003c2a9a6a9eb41f2311c28645d65e13a28ab81b5bde9a4c0af45",
+      "original_size": [
+        1280,
+        720
+      ],
+      "display_size": [
+        1280,
+        798
+      ],
+      "redactions": [
+        {
+          "box": [
+            300,
+            195,
+            560,
+            239
+          ],
+          "description": "作者信息已遮盖"
+        }
+      ],
+      "rendition": "attributed_display_copy_not_original_capture"
+    },
+    {
+      "file": "docs/assets/teardown/sspai-free-paid-list.jpg",
+      "source": "少数派官网",
+      "captured_date": "2026-10-13",
+      "label": "截图来源：少数派官网，2026-10-13，仅用于产品分析",
+      "original_sha256": "d90b2726ef27f8d9dee1c3c4d93c7b649dab9c3a4f2ae7c393768f0d4e3cb0aa",
+      "sha256": "48db2616a301c3933fe68976948f7a041274cfca949017cfb2ff5f334d772c00",
+      "original_size": [
+        1280,
+        720
+      ],
+      "display_size": [
+        1280,
+        798
+      ],
+      "redactions": [],
+      "rendition": "attributed_display_copy_not_original_capture"
+    },
+    {
+      "file": "docs/assets/teardown/sspai-home.jpg",
+      "source": "少数派官网",
+      "captured_date": "2026-10-13",
+      "label": "截图来源：少数派官网，2026-10-13，仅用于产品分析",
+      "original_sha256": "b398cbb2ca567a43ead0cb49b251fb1a987a47511d6ba35fa25d201210531e21",
+      "sha256": "5cd1a138268ac4fabcd03a352686f92738feb400a5aa1e72660a5dfe287b47f7",
+      "original_size": [
+        1280,
+        720
+      ],
+      "display_size": [
+        1280,
+        798
+      ],
+      "redactions": [
+        {
+          "box": [
+            225,
+            495,
+            382,
+            572
+          ],
+          "description": "社区署名已遮盖"
+        },
+        {
+          "box": [
+            734,
+            633,
+            900,
+            720
+          ],
+          "description": "人物配图已遮盖"
+        }
+      ],
+      "rendition": "attributed_display_copy_not_original_capture"
+    },
+    {
+      "file": "docs/assets/teardown/sspai-paid-series.jpg",
+      "source": "少数派官网",
+      "captured_date": "2026-10-13",
+      "label": "截图来源：少数派官网，2026-10-13，仅用于产品分析",
+      "original_sha256": "9b2ec4db59472240a7db88db26a54e18351459d084c89fdb7622f44836842afc",
+      "sha256": "3f8d7e9ac76a969e78a8b192c556df5ecbf2e0172327c9ce7fc64eb20d321e20",
+      "original_size": [
+        1280,
+        720
+      ],
+      "display_size": [
+        1280,
+        798
+      ],
+      "redactions": [
+        {
+          "box": [
+            910,
+            325,
+            976,
+            416
+          ],
+          "description": "署名"
+        }
+      ],
+      "rendition": "attributed_display_copy_not_original_capture"
+    },
+    {
+      "file": "docs/assets/teardown/sspai-paywall.jpg",
+      "source": "少数派官网",
+      "captured_date": "2026-10-13",
+      "label": "截图来源：少数派官网，2026-10-13，仅用于产品分析",
+      "original_sha256": "f0946f57caf4e5e53d32d06b0ffd6d8ae73521f0677ca011510bfa33c73e6b08",
+      "sha256": "98332cec2cce0cddd37160f951bbfe458fb0c2a6fa4abefe89c3493877d61efe",
+      "original_size": [
+        1280,
+        720
+      ],
+      "display_size": [
+        1280,
+        798
+      ],
+      "redactions": [
+        {
+          "box": [
+            518,
+            463,
+            588,
+            495
+          ],
+          "description": "署名"
+        }
+      ],
+      "rendition": "attributed_display_copy_not_original_capture"
+    },
+    {
+      "file": "docs/assets/teardown/sspai-prime-faq.jpg",
+      "source": "少数派官网",
+      "captured_date": "2026-10-13",
+      "label": "截图来源：少数派官网，2026-10-13，仅用于产品分析",
+      "original_sha256": "c01816732a4ba9da78cac774bd31a9ce4bf75ab058f3ba705c478fb4b1d14218",
+      "sha256": "74b18937eb672dffa07608d91a22a28f7a8a6b3ef78e49afc35990e56a8e7ba8",
+      "original_size": [
+        1280,
+        720
+      ],
+      "display_size": [
+        1280,
+        798
+      ],
+      "redactions": [],
+      "rendition": "attributed_display_copy_not_original_capture"
+    },
+    {
+      "file": "docs/assets/teardown/sspai-prime-plans.jpg",
+      "source": "少数派官网",
+      "captured_date": "2026-10-13",
+      "label": "截图来源：少数派官网，2026-10-13，仅用于产品分析",
+      "original_sha256": "af3dd3b68e0767a71bc9810f23ffa217d9579bd26ea081daafdc1d8c89504a36",
+      "sha256": "523dcda9859aaf1e048d7ccf52b9d935093eb6ee30e9a3f8383637dea2194c97",
+      "original_size": [
+        1280,
+        720
+      ],
+      "display_size": [
+        1280,
+        798
+      ],
+      "redactions": [],
+      "rendition": "attributed_display_copy_not_original_capture"
+    },
+    {
+      "file": "docs/assets/teardown/sspai-prime-top.jpg",
+      "source": "少数派官网",
+      "captured_date": "2026-10-13",
+      "label": "截图来源：少数派官网，2026-10-13，仅用于产品分析",
+      "original_sha256": "cc35ded9e9345ea51d3ed3b53e321833ee022f301544f85859dca70cddad0b83",
+      "sha256": "b74d0eea76065e52be656ff30bfb513adcc7cc31193ccf40f136f348f4a5dcd5",
+      "original_size": [
+        1280,
+        720
+      ],
+      "display_size": [
+        1280,
+        798
+      ],
+      "redactions": [],
+      "rendition": "attributed_display_copy_not_original_capture"
+    },
+    {
+      "file": "docs/assets/teardown/sspai-related.jpg",
+      "source": "少数派官网",
+      "captured_date": "2026-10-13",
+      "label": "截图来源：少数派官网，2026-10-13，仅用于产品分析",
+      "original_sha256": "67480024750fe5383a63b591d42691790d824c0bd41d3c60789ca93e836c969b",
+      "sha256": "3a86f6747cae3210b7479cf9cf9f2e8333a63d5cab50c3ef2abe883bb5679dc3",
+      "original_size": [
+        1280,
+        720
+      ],
+      "display_size": [
+        1280,
+        798
+      ],
+      "redactions": [],
+      "rendition": "attributed_display_copy_not_original_capture"
+    },
+    {
+      "file": "docs/assets/teardown/sspai-trial.jpg",
+      "source": "少数派官网",
+      "captured_date": "2026-10-13",
+      "label": "截图来源：少数派官网，2026-10-13，仅用于产品分析",
+      "original_sha256": "8daf0dbe51a2c73a9bd9be5360314175c8de91ff2d1730f39e4d5f1921272480",
+      "sha256": "f15c50e93d0d6e6038982ac1d41c7938f1496ffff32d5282f2431d5d16e6fdd0",
+      "original_size": [
+        1280,
+        720
+      ],
+      "display_size": [
+        1280,
+        798
+      ],
+      "redactions": [],
+      "rendition": "attributed_display_copy_not_original_capture"
+    },
+    {
+      "file": "docs/assets/teardown-technical/ikea-before-cookie.png",
+      "source": "宜家中国官网",
+      "captured_date": "2026-10-13",
+      "label": "截图来源：宜家中国官网，2026-10-13，仅用于产品分析",
+      "original_sha256": "7194e1735bdb0002b485524998ded1783446ba97bc8150c8ba0b19276dc109ea",
+      "sha256": "fd35c04d7861647d92c56c8c0aafb597de39cd2ca5c1fb7ac622c5bd93390f08",
+      "original_size": [
+        2400,
+        1410
+      ],
+      "display_size": [
+        2400,
+        1556
+      ],
+      "redactions": [
+        {
+          "box": [
+            161,
+            674,
+            832,
+            963
+          ],
+          "description": "推广配图已遮盖"
+        }
+      ],
+      "rendition": "attributed_display_copy_not_original_capture"
+    },
+    {
+      "file": "docs/assets/teardown-technical/ikea-home.png",
+      "source": "宜家中国官网",
+      "captured_date": "2026-10-13",
+      "label": "截图来源：宜家中国官网，2026-10-13，仅用于产品分析",
+      "original_sha256": "d4825fe4c64a6f23cbad845c0b88c6d780eb66da0134f5d494e3521c2278b5ce",
+      "sha256": "969940607caeab565d1e0db60fdfe78b96100232075145aee2a2947686539667",
+      "original_size": [
+        2400,
+        1410
+      ],
+      "display_size": [
+        2400,
+        1556
+      ],
+      "redactions": [
+        {
+          "box": [
+            161,
+            674,
+            832,
+            794
+          ],
+          "description": "推广配图已遮盖"
+        }
+      ],
+      "rendition": "attributed_display_copy_not_original_capture"
+    },
+    {
+      "file": "docs/assets/teardown-technical/ikea-scrolled.png",
+      "source": "宜家中国官网",
+      "captured_date": "2026-10-13",
+      "label": "截图来源：宜家中国官网，2026-10-13，仅用于产品分析",
+      "original_sha256": "42b35b817134bdcc08975a32906a23b8229c7ecd34e7f7102255cf1ba1981f1a",
+      "sha256": "d33c9b506afb9427f407e55d657e52a816b3a21f6a818dac0ddb12f8afc8ba16",
+      "original_size": [
+        2400,
+        1410
+      ],
+      "display_size": [
+        2400,
+        1556
+      ],
+      "redactions": [
+        {
+          "box": [
+            161,
+            674,
+            832,
+            794
+          ],
+          "description": "推广配图已遮盖"
+        }
+      ],
+      "rendition": "attributed_display_copy_not_original_capture"
+    },
+    {
+      "file": "docs/assets/teardown-technical/metaso-technical-answer.png",
+      "source": "秘塔 AI 搜索官网",
+      "captured_date": "2026-10-13",
+      "label": "截图来源：秘塔 AI 搜索官网，2026-10-13，仅用于产品分析",
+      "original_sha256": "a7fead685272a623e0d165c69de13c543f8742417d8880bfdbfc4cd252e4034a",
+      "sha256": "9fbd1c9a9fba255b5b13bbd396bad474562a1f722984cbb19f769c43ae637d02",
+      "original_size": [
+        1440,
+        857
+      ],
+      "display_size": [
+        1440,
+        944
+      ],
+      "redactions": [],
+      "rendition": "attributed_display_copy_not_original_capture"
+    },
+    {
+      "file": "docs/assets/teardown-technical/metaso-technical-followup.png",
+      "source": "秘塔 AI 搜索官网",
+      "captured_date": "2026-10-13",
+      "label": "截图来源：秘塔 AI 搜索官网，2026-10-13，仅用于产品分析",
+      "original_sha256": "6ccbc700bf541a02422e6de24fc7b5af1c1af823856c284d42c283b2f3b5181a",
+      "sha256": "6a06681b8dba9a79e72f66847fb83d44abe391681b703468da3ee82ab741e14e",
+      "original_size": [
+        1440,
+        857
+      ],
+      "display_size": [
+        1440,
+        944
+      ],
+      "redactions": [],
+      "rendition": "attributed_display_copy_not_original_capture"
+    },
+    {
+      "file": "docs/assets/teardown-technical/metaso-technical-home.png",
+      "source": "秘塔 AI 搜索官网",
+      "captured_date": "2026-10-13",
+      "label": "截图来源：秘塔 AI 搜索官网，2026-10-13，仅用于产品分析",
+      "original_sha256": "fab81590fdc3c2ad57ed399ad2fc7648ce077e226e66a237f56fc56ac36a2350",
+      "sha256": "95c20c3e1c6cb21cf4254f60ed4510fd6a587c083d827bab135fa0cb121bd7de",
+      "original_size": [
+        1440,
+        857
+      ],
+      "display_size": [
+        1440,
+        944
+      ],
+      "redactions": [],
+      "rendition": "attributed_display_copy_not_original_capture"
+    },
+    {
+      "file": "docs/assets/teardown-technical/sspai-technical-directory.png",
+      "source": "少数派官网",
+      "captured_date": "2026-10-13",
+      "label": "截图来源：少数派官网，2026-10-13，仅用于产品分析",
+      "original_sha256": "0d30c3fe6d599a145cd2313d77a60b1fa8a68571ba9fa2efb789a6d51c03b0b0",
+      "sha256": "2277a0a3b0ce72daa0b496fc3fbdc2d08c772569207adae21d997ef0ed5551f9",
+      "original_size": [
+        1440,
+        857
+      ],
+      "display_size": [
+        1440,
+        944
+      ],
+      "redactions": [
+        {
+          "box": [
+            990,
+            362,
+            1054,
+            451
+          ],
+          "description": "署名"
+        }
+      ],
+      "rendition": "attributed_display_copy_not_original_capture"
+    },
+    {
+      "file": "docs/assets/teardown-technical/sspai-technical-faq.png",
+      "source": "少数派官网",
+      "captured_date": "2026-10-13",
+      "label": "截图来源：少数派官网，2026-10-13，仅用于产品分析",
+      "original_sha256": "0197cbf7c594d8dbc9dbe3848a8eec1353b06308a255fa9c23518971f12c04d0",
+      "sha256": "2b178f93abfa2a95be073776472ae503ec1359e30b25ef1c4ff98d7cc78a41e9",
+      "original_size": [
+        1440,
+        857
+      ],
+      "display_size": [
+        1440,
+        944
+      ],
+      "redactions": [],
+      "rendition": "attributed_display_copy_not_original_capture"
+    },
+    {
+      "file": "docs/assets/teardown-technical/sspai-technical-home.png",
+      "source": "少数派官网",
+      "captured_date": "2026-10-13",
+      "label": "截图来源：少数派官网，2026-10-13，仅用于产品分析",
+      "original_sha256": "3f11446f20816b4e11e180798e23ecb75afbfe679b18453b06ceb3bb231d8b46",
+      "sha256": "1927d9a381f2273b92f95c5071e9d79138476553b934d69a2d5738dedf796eba",
+      "original_size": [
+        1440,
+        857
+      ],
+      "display_size": [
+        1440,
+        944
+      ],
+      "redactions": [
+        {
+          "box": [
+            310,
+            495,
+            454,
+            556
+          ],
+          "description": "社区署名已遮盖"
+        },
+        {
+          "box": [
+            460,
+            734,
+            568,
+            761
+          ],
+          "description": "署名已遮盖"
+        }
+      ],
+      "rendition": "attributed_display_copy_not_original_capture"
+    },
+    {
+      "file": "docs/assets/teardown-technical/sspai-technical-paywall.png",
+      "source": "少数派官网",
+      "captured_date": "2026-10-13",
+      "label": "截图来源：少数派官网，2026-10-13，仅用于产品分析",
+      "original_sha256": "4e5ddc1aa0459c2428bbc1f94a74b65cf9e01616ae7b67850ed5603188509fe3",
+      "sha256": "8165ff356c5d12442660dc8b5eec84fe81ab743e33dd69abf1e0cd14b205ead0",
+      "original_size": [
+        1440,
+        857
+      ],
+      "display_size": [
+        1440,
+        944
+      ],
+      "redactions": [
+        {
+          "box": [
+            598,
+            532,
+            665,
+            562
+          ],
+          "description": "署名"
+        },
+        {
+          "box": [
+            380,
+            801,
+            560,
+            828
+          ],
+          "description": "责编信息已遮盖"
+        }
+      ],
+      "rendition": "attributed_display_copy_not_original_capture"
+    },
+    {
+      "file": "docs/assets/teardown-technical/sspai-technical-prime.png",
+      "source": "少数派官网",
+      "captured_date": "2026-10-13",
+      "label": "截图来源：少数派官网，2026-10-13，仅用于产品分析",
+      "original_sha256": "1e3e769a461c66d3d4ebceb480995ff717168456baf40ffca55b2d813eef2d5d",
+      "sha256": "1ebf0d79e404ec72f9c678bebca7a06865c644421db58f6708b719462a2df193",
+      "original_size": [
+        1440,
+        857
+      ],
+      "display_size": [
+        1440,
+        944
+      ],
+      "redactions": [],
+      "rendition": "attributed_display_copy_not_original_capture"
+    }
+  ],
+  "original_archive": "private_local_backup_outside_repository_not_published"
+}

@@ -1,0 +1,26 @@
+{
+  "exit_code": 0,
+  "stdlib_environment_without_pyyaml": true,
+  "installed": {
+    "Codex skills/plain-talk": true,
+    "Codex skills/redesign": true,
+    "Codex skills/teardown": true,
+    "Claude skills/plain-talk": true,
+    "Claude skills/redesign": true,
+    "Claude skills/teardown": true
+  },
+  "readable": {
+    "Codex skills/plain-talk": true,
+    "Codex skills/redesign": true,
+    "Codex skills/teardown": true,
+    "Claude skills/plain-talk": true,
+    "Claude skills/redesign": true,
+    "Claude skills/teardown": true
+  },
+  "repeat_exit_code": 0,
+  "uninstall_exit_code": 0,
+  "unrelated_preserved": true,
+  "all_owned_links_removed": true,
+  "source_preserved": true,
+  "scope": "macOS local fresh venv and empty custom host directories, not another physical machine or model-trigger test"
+}

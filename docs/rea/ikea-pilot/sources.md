@@ -10,7 +10,7 @@
 | S2 | [点击 Cookie 后的首页](../../assets/teardown-technical/ikea-home.png) | 17:54:30.230 | 隐私提示与推广叠加；登录与客服入口 |
 | S3 | [向下滚动后的首页](../../assets/teardown-technical/ikea-scrolled.png) | 18:18:23.720 | 房间卡片与持续遮挡；与 E1 的滚动属于同次操作 |
 
-截图尺寸均为 2400 × 1410；原文件 SHA-256、rea 来源 ID 与时间记录在 [screenshots.json](screenshots.json)。保留截图原字节，未裁剪或涂改。图中人物为宜家公开推广素材，不是本机用户或登录账户信息。
+原始采集视口均为 2400 × 1410；M6 展示副本新增来源条，并遮盖推广配图中的人物区域。原始文件和当前展示文件的 SHA-256 分别记录在 [screenshots.json](screenshots.json)，rea 来源 ID 指向原始采集，不代表修改后的图片哈希。尺寸及处理区域见[素材索引](../../assets/screenshot-attribution.json)。
 
 ## 采集与静态分析
 

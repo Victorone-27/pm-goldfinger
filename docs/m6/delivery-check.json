@@ -1,0 +1,124 @@
+{
+  "date": "2026-10-13",
+  "scope": "tracked and non-ignored current files, not Git history",
+  "files_checked": 162,
+  "local_links_checked": 373,
+  "missing_links": [],
+  "inline_scripts": [
+    {
+      "file": "skills/redesign/examples/01-ikea/after.html",
+      "valid": true
+    },
+    {
+      "file": "skills/redesign/examples/01-ikea/before.html",
+      "valid": true
+    },
+    {
+      "file": "skills/redesign/examples/01-ikea/compare.html",
+      "valid": true
+    },
+    {
+      "file": "skills/redesign/examples/02-metaso/after.html",
+      "valid": true
+    },
+    {
+      "file": "skills/redesign/examples/02-metaso/before.html",
+      "valid": true
+    },
+    {
+      "file": "skills/redesign/examples/02-metaso/compare.html",
+      "valid": true
+    },
+    {
+      "file": "skills/redesign/examples/03-sspai/after.html",
+      "valid": true
+    },
+    {
+      "file": "skills/redesign/examples/03-sspai/before.html",
+      "valid": true
+    },
+    {
+      "file": "skills/redesign/examples/03-sspai/compare.html",
+      "valid": true
+    },
+    {
+      "file": "skills/redesign/templates/compare.html",
+      "valid": true
+    },
+    {
+      "file": "skills/redesign/templates/prototype.html",
+      "valid": true
+    }
+  ],
+  "prototype_media": [
+    {
+      "file": "skills/redesign/examples/01-ikea/after.html",
+      "neutral_or_text_only": true
+    },
+    {
+      "file": "skills/redesign/examples/01-ikea/before.html",
+      "neutral_or_text_only": true
+    },
+    {
+      "file": "skills/redesign/examples/02-metaso/after.html",
+      "neutral_or_text_only": true
+    },
+    {
+      "file": "skills/redesign/examples/02-metaso/before.html",
+      "neutral_or_text_only": true
+    },
+    {
+      "file": "skills/redesign/examples/03-sspai/after.html",
+      "neutral_or_text_only": true
+    },
+    {
+      "file": "skills/redesign/examples/03-sspai/before.html",
+      "neutral_or_text_only": true
+    }
+  ],
+  "attributed_screenshots": 29,
+  "redacted_screenshots": 10,
+  "hash_failures": [],
+  "tool_images": [
+    {
+      "file": "docs/assets/tool-competitor-weekly.png",
+      "size": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "docs/assets/tool-plain-talk.png",
+      "size": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "docs/assets/tool-redesign.png",
+      "size": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "docs/assets/tool-teardown.png",
+      "size": [
+        1280,
+        800
+      ]
+    }
+  ],
+  "privacy_scan_categories": [
+    "real_key_shape",
+    "private_key",
+    "personal_machine_path",
+    "anonymous_chat_identifier",
+    "mobile_phone_shape",
+    "email_address"
+  ],
+  "privacy_candidates": [],
+  "dry_run_matches_public_example": true,
+  "manual_visual_review": "29 attributed screenshot contact sheets; enlarged relevant masks; 4 tool PNGs; 3 compare PNGs; README preview",
+  "limitation": "Pattern scan is scoped; necessary public Nobel laureate names and user-provided anonymized resume facts are retained."
+}

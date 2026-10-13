@@ -1,101 +1,154 @@
-# 产品经理金手指 · pm-goldfinger
+# 产品经理金手指
 
-给产品经理用的开源 AI 工具箱：拆产品、改界面、说人话、追踪竞品变化。
+**给产品经理的 AI 工具箱：拆产品、改界面、说人话、追竞品，把想法变成可核查的成果。**
 
-An AI toolkit for product managers, built around traceable examples and practical workflows.
+An AI toolkit for product managers: analyze products, redesign screens, explain clearly, and track competitors.
 
-## 当前状态
+<table>
+<tr>
+<td width="50%">
+<a href="skills/teardown/examples/02-metaso.md"><img src="docs/assets/tool-teardown.png" alt="产品拆解：从用户路径找问题，每个判断都有来源" width="360"></a><br>
+<strong>① 拆产品</strong> · 看清用户怎么用、卡在哪，也能查看技术证据。<br>
+<a href="skills/teardown/examples/02-metaso.md">看秘塔拆解</a> · <a href="skills/teardown/SKILL.md">使用方法</a>
+</td>
+<td width="50%">
+<a href="skills/redesign/examples/index.html"><img src="docs/assets/tool-redesign.png" alt="截图改版：问题来自拆解报告，左右对照改前与改后方案" width="360"></a><br>
+<strong>② 改界面</strong> · 把截图里的体验问题，改成两个可点击原型。<br>
+<a href="skills/redesign/examples/index.html">看三组改版</a> · <a href="skills/redesign/SKILL.md">使用方法</a>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<a href="skills/plain-talk/examples/04-metric.md"><img src="docs/assets/tool-plain-talk.png" alt="说人话：同一组指标分别解释给老板、HR和研发，数字可复算" width="360"></a><br>
+<strong>③ 说人话</strong> · 同一段话，老板、HR、研发各有一版，事实不变。<br>
+<a href="skills/plain-talk/examples/04-metric.md">看指标改写</a> · <a href="skills/plain-talk/SKILL.md">使用方法</a>
+</td>
+<td width="50%">
+<a href="agents/competitor-weekly/reports/examples/dry-run.md"><img src="docs/assets/tool-competitor-weekly.png" alt="竞品周报：离线虚构数据演示，谁更新了版本、谁的评分变化一目了然" width="360"></a><br>
+<strong>④ 追变化</strong> · 比较竞品版本、评分与更新说明，只报变化。<br>
+<a href="agents/competitor-weekly/reports/examples/dry-run.md">看离线周报</a> · <a href="agents/competitor-weekly/README.md">配置与运行</a>
+</td>
+</tr>
+</table>
 
-M0、M1、M2、M4、M4.5 已通过。M3 小红书口碑暂缓，等用户准备账号。M5 截图改版已完成三组可点击方案，现交 [M5 验收](docs/m5-validation.md)，等待确认；M6 尚未开始。
+三个 Skill 使用 Codex / Claude Code 的能力；周报是可定时运行的 Python 脚本。当前周报跟踪中国区 App Store，小红书口碑暂缓。
 
-| 工具 | 用途 | 状态 |
-| --- | --- | --- |
-| [产品拆解](skills/teardown/) | 从公开网页或截图生成产品分析，网页可附技术证据 | M4、M4.5 已通过 · 含 30 秒速读与三例技术透视 |
-| [截图改版](skills/redesign/) | 从体验问题形成改前、改后可点击原型 | M5 待验收 · [三组交互对比](skills/redesign/examples/index.html) |
-| [说人话](skills/plain-talk/) | 面向老板、HR 和研发改写，保持事实与口径 | M2 已通过 |
-| [竞品周报](agents/competitor-weekly/) | 对比 App Store 更新，后续增加小红书口碑变化 | M1 已通过；M3 暂缓，等用户准备账号 |
+## 安装：先用三个 Skill
 
-## 设计原则
-
-- 三个 Skill 提供方法、步骤、模板和检查清单，使用 Codex 或 Claude Code 的能力，不单独调用模型接口。
-- 竞品周报使用 Python 3.11+，用代码做快照与比较，仅将需要解读的内容交给 DeepSeek；无密钥时直接输出原文。
-- 面向求职作品集：每个工具后续提供真实运行示例和效果图，事实附来源，推断单独标明。
-
-## 目录
-
-```text
-skills/                    Skill 流程、模板和示例；未完成工具保留占位
-agents/competitor-weekly/   周报的代码、提示词、测试、定时任务与数据目录
-docs/assets/               后续演示效果图
-scripts/                   Skill 安装与卸载脚本
-TASKS.md                   原始任务书与验收标准
-```
-
-空目录用 `.gitkeep` 保留。运行数据和真实周报不提交到 Git；可公开的周报示例预留在 `agents/competitor-weekly/reports/examples/`。
-
-## 安装 Skill
-
-需要 Python 3.11+，安装器只使用标准库。下载仓库后，在仓库根目录运行：
+准备 Python 3.11+ 和 Codex 或 Claude Code。将本仓库下载到固定位置，在仓库根目录运行这一条命令：
 
 ```sh
 bash scripts/install_skills.sh
 ```
 
-脚本先打印计划，输入 `y` 后才会创建链接；默认安装到 Codex 的 `~/.agents/skills` 和 Claude Code 的 `~/.claude/skills`。当前可安装 `plain-talk`、`teardown` 和 `redesign`。通过软链接引用本仓库，请保留仓库位置；更新 Skill 文件后宿主会读取新内容。
+脚本先列出计划，输入 `y` 后安装 `teardown`、`redesign`、`plain-talk`。默认链接到 `~/.agents/skills`（Codex）与 `~/.claude/skills`（Claude Code），不需要模型密钥，也不会安装 rea、浏览器或定时任务。保留仓库目录，避免软链接失效；新安装后重新打开宿主会话，让技能列表刷新。
 
-按宿主安装、预览和卸载：
+只装一个宿主、预览或卸载：
 
 ```sh
-bash scripts/install_skills.sh --target codex --dry-run
 bash scripts/install_skills.sh --target codex
-bash scripts/install_skills.sh --target claude
+bash scripts/install_skills.sh --target claude --dry-run
 bash scripts/install_skills.sh --uninstall
 ```
 
-重复安装不会重复创建；已有同名文件或其他来源的链接时拒绝覆盖。卸载只删除指向本仓库的链接，保留源文件及其他技能。`--skill plain-talk`、`--skill teardown` 或 `--skill redesign` 可限定技能；`--yes` 用于已确认的自动化操作，仍先打印计划。
+重复安装会跳过已存在的本项目链接；同名外部文件不会被覆盖；卸载保留仓库与其他技能。已在 macOS 的全新 Python 虚拟环境和空技能目录验证，不依赖第三方 Python 包；其他系统与宿主的完整运行兼容性尚未实测。[安装与验收记录](docs/m6-validation.md)
 
-安装后对 Codex 说：
+## 四个工具怎么用
 
-> 帮我把这段话说成人话：问答正确率从 75% 提升到 94%（200 题测试集，人工判定）。
+### ① 产品拆解：知道哪里卡，也说得清凭什么
 
-默认输出老板、HR/外行、研发三版；没有收入或效率证据时不补收益，数字和测试口径保留。示例输入来自任务书，不是本项目的真实业务成绩。查看[五类完整示例](skills/plain-talk/examples/README.md)。
+给产品名、公开网址或截图，输出“30 秒速读”、功能地图、用户路径、商业模式和 3 个具体 AI 机会点。提供目标岗位时，另给面试准备方向。
 
-也可在 Codex 显式使用 `$plain-talk`，在 Claude Code 使用 `/plain-talk`。自动选择取决于宿主对请求的判断；新安装后若当前会话未刷新技能列表，重新打开会话。安装目录与字段依据 2026-10-13 查阅的 [Codex 官方规范](https://learn.chatgpt.com/docs/build-skills)及 [Claude Code 官方规范](https://code.claude.com/docs/en/skills)。
+> 拆解秘塔 AI 搜索 https://metaso.cn/ ，只看未登录路径，重点看来源、可信度和追问。
 
-## 使用「产品拆解」
+显式调用：Codex 用 `$teardown`，Claude Code 用 `/teardown`。
 
-安装后对 Codex 说：
+**示例：**[秘塔完整报告](skills/teardown/examples/02-metaso.md)，另有[宜家](skills/teardown/examples/01-ikea.md)、[少数派](skills/teardown/examples/03-sspai.md)。
 
-> 拆解宜家中国 https://www.ikea.cn/cn/zh/ ，只看未登录的沙发选购路径，重点分析筛选和购买决策。
+**取舍：**先走具体任务，再提出改法；截图所见、公开资料和推断分别标记。技术透视能看见浏览器请求和脚本，但不会据此猜服务端使用哪家模型。
 
-也可用 `$teardown`（Codex）或 `/teardown`（Claude Code）显式调用。网页由宿主实际浏览并截图；App 需要提供截图或录屏。输出先给“30 秒速读”（最好的一点、最大的问题、先改什么），再给一页摘要，含功能地图、核心路径、商业模式、3 个具体 AI 机会点；提供目标岗位时再加面试准备。速读不带来源标记，下方正文每条结论区分截图、公开资料与推断。
+本项目网页观察只用独立 Chrome for Testing / Chromium 与已核验的本地调试端口，不登录、不使用日常浏览器。技术透视另外使用 rea 6.4.0 和项目内 Node 24.21.0；这些可选依赖不随 Skill 安装。[技术观察流程](skills/teardown/references/technical-observation.md) · [接入记录](docs/rea-installation.md)
 
-真实示例：[宜家中国](skills/teardown/examples/01-ikea.md) · [秘塔 AI 搜索](skills/teardown/examples/02-metaso.md) · [少数派](skills/teardown/examples/03-sspai.md)；[产品证据与截图](skills/teardown/examples/sources.md) · [新增技术证据](docs/rea/technical/sources.md)。少数派单列 PRIME 入口与免费/付费边界。产品分析使用宿主能力，不单独调用模型 API；网页技术观察另需下述 rea 与独立浏览器，遇核心登录阻塞就停下说明。
+### ② 截图改版：让发现的问题有一个可比较的答案
 
-[流程与自检](skills/teardown/SKILL.md) · [M4 验证记录](docs/m4-validation.md)。这里的建议是待验证的方案，不是已取得的产品效果。
+给一张截图，或指定已完成拆解里的问题，输出 3–5 个问题、改法、验证思路、两个单文件 HTML 原型和对比图。
 
-技术透视将页面现象与加载脚本、观察窗口内的请求关联，逐条区分观察、推断与未知。秘塔实测初问/追问都请求同源 `/api/search/chat`，返回 `text/event-stream` 并持续接收数据；这能解释浏览器看到的调用方式，不能揭示服务端用了哪家模型。少数派补充统计、会员/内容接口线索，并保留公开内容与付费墙的边界。
+> 用已有宜家首页截图改版，解决隐私提示和推广叠加遮挡房间入口的问题；写明它来自拆解报告哪一条。
 
-rea 6.4.0 使用项目内独立 Node 24.21.0，系统默认 Node 25 保留。[最初安装记录](docs/rea-installation.md)保留宜家试点的窗口误读偏差；后续已改用不同程序 Chrome for Testing，并加入[隔离启动与核验脚本](skills/teardown/scripts/isolated_browser.py)。禁止通用窗口/无障碍工具；只通过核验的 127.0.0.1 端口操作，用后关闭并删除 profile。详见[当前流程](skills/teardown/references/technical-observation.md)与[整体验证](docs/m4.5-validation.md)。实际 MCP 协议调用通过，当前聊天原生 MCP 重连尚未验证。依赖不由 Skill 安装脚本自动安装。
+显式调用：`$redesign` / `/redesign`。
 
-## 使用「截图改版」
+**示例：**[宜家首页](skills/redesign/examples/01-ikea/compare.html) · [秘塔追问](skills/redesign/examples/02-metaso/compare.html) · [少数派 PRIME](skills/redesign/examples/03-sspai/compare.html)。下载后在本地浏览器打开 HTML；GitHub 文件页本身不运行原型。
 
-提供截图后说“根据这张截图改版，重点解决入口被浮层遮挡的问题”，或显式用 `$redesign` / `/redesign`。也可指定已有拆解报告的条目，直接使用已保存截图。输出每组 3–5 个问题、来源映射、验证思路、单文件 before/after、可点击 compare 和效果图；不另调模型 API。
+**取舍：**改前保留问题状态，改后只改有依据的部分；每条都回链到报告与截图。原型使用中性示意图，是产品验证草图，不声称带来真实转化提升。
 
-[三组交互总览](skills/redesign/examples/index.html)承接已有报告：宜家房间入口、秘塔追问引用、少数派 PRIME 权益。所有原型离线可用，品牌用占位色块，搜索和购买均为本地演示。网页浏览检查仍遵守本项目的独立程序与端口核验约定。[Skill](skills/redesign/SKILL.md) · [M5 验证记录](docs/m5-validation.md)。
+### ③ 说人话：改表达，不改事实
 
-## 开发顺序
+输入黑话、指标、PRD、周报、简历或技术方案，得到老板版、HR / 外行版、研发版，以及数字核对。
 
-当前顺序：M0 仓库骨架 → M1 App Store 周报 → M2 说人话（含 Skill 安装脚本）→ M4 产品拆解 → M4.5 技术透视 → M5 截图改版 → M6 演示素材与 README → M7 作品集网页和 BOSS 长图。M3 小红书口碑暂缓，等用户准备好账号后再安排；原始 TASKS.md 保留不改。
+> 帮我把这段话说成人话：DAU 环比增长 12%，次日留存从 35% 提升到 41%。
 
-每个里程碑单独进行本地提交，按[任务书第 6 节](TASKS.md#6-验收报告格式每个里程碑结束时交给我)交验收报告，确认通过后再开始下一个里程碑。
+显式调用：`$plain-talk` / `/plain-talk`。
 
-## 致谢
+**示例：**[常见指标](skills/plain-talk/examples/04-metric.md)；[五类完整示例](skills/plain-talk/examples/README.md)。
 
-[rea（Reverse Engineer Anything）](https://github.com/morluto/rea)为本项目技术透视提供网站观察能力与证据组织方法。上游采用 [MIT 许可证](https://github.com/morluto/rea/blob/a56f7bb668ab23fec8d33f7af353ac7ed2fe1895/LICENSE)，`Copyright (c) 2026 morluto`；安装包保留原版权与许可证。本阶段调用依赖、参考方法，没有复制其实现代码到本仓库。[学习笔记](docs/rea-study.md)记录取舍。
+**取舍：**HR 版可以换算成“每 100 人有多少人”，但必须能精确复算；缺少口径只在研发版指出，不往老板版和 HR 版补免责话或编造收益。
 
-[abi/screenshot-to-code](https://github.com/abi/screenshot-to-code)为截图还原及视觉迭代提供方法参考；已核对其 MIT 协议，`Copyright (c) 2023 Abi Raja`。本项目未复制其实现或提示词，未安装其服务；在截图还原与改后原型之间加入有来源的问题判断与验证方案。见[参考说明](skills/redesign/references/method.md)。
+### ④ 竞品周报：只讲这次新增的变化
 
-## 许可证
+当前配置为用户确认的豆包、千问、元宝。比较上一份有效快照，注明实际日期；同日重跑保留比较基线。评分保留两位小数，评分人数超过一万显示为“万”。
 
-[MIT](LICENSE)
+从仓库根目录进入周报目录，建立环境并先跑离线示例：
+
+```sh
+cd agents/competitor-weekly
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python run_weekly.py --dry-run
+```
+
+`--dry-run` 只用虚构 fixtures，不联网、不调用模型。[演示周报](agents/competitor-weekly/reports/examples/dry-run.md)与效果图都明确标注了这一点。
+
+确认 `config.yaml` 中的竞品、时区和模型配置后，可以先获取真实数据但跳过模型：
+
+```sh
+.venv/bin/python run_weekly.py --no-llm
+```
+
+需要 DeepSeek 解读时，运行时优先读 `DEEPSEEK_API_KEY`，macOS 下为空再读钥匙串。由你自己执行这一条命令，按系统提示输入 key，不需要把 key 发给 Agent：
+
+```sh
+/usr/bin/security add-generic-password -U -a "$USER" -s pm-goldfinger-deepseek -w
+```
+
+配置后运行 `.venv/bin/python run_weekly.py`。只有更新说明变化才调用模型并产生相应 API 费用；没有密钥或调用失败时保留原文照常出报。真实冒烟测试命令为 `.venv/bin/python run_weekly.py --llm-smoke-test`，会调用一次模型、显示 token 数，不写周报或快照；由你按需执行。
+
+每周一上午 9:00 的 macOS 定时任务需要单独安装，系统时区应与配置一致：
+
+```sh
+bash schedule/install.sh --preview
+# 核对预览后，由你执行：
+bash schedule/install.sh
+```
+
+定时任务默认启用模型，不依赖 shell 中的环境变量。可用 `bash schedule/uninstall.sh` 卸载。[完整配置、降级逻辑与测试](agents/competitor-weekly/README.md)
+
+**取舍：**版本、评分和日期由代码比较；模型只解读变化的更新说明并附原文，不能代替事实来源。
+
+## 示例、素材与当前进度
+
+- 截图已注明“截图来源：XX 官网，2026-10-13，仅用于产品分析”；与分析无关的人像、署名及匿名会话标识已处理。展示副本与原始证据的哈希分开记录。
+- 原型和四张工具效果图使用中性图形或文字示例，不含第三方商品 / 房间照片。保留的官网截图仅作为分析证据，第三方页面内容不因本项目 MIT 协议而改变权属。[素材说明与来源](docs/assets/README.md)
+- 简历示例由用户明确提供，照实标“用户简历”，没有公司名、姓名或联系方式；指标不被冒充为本工具箱取得的业绩。
+- M0、M1、M2、M4、M4.5、M5 已通过；M5 的 9 条问题获用户认同 8 条以上。M6 交验收，M3 暂缓；尚未公开发布。
+
+## 后续计划
+
+工具箱会继续增加。近期安排：M6 验收后制作作品集网页与 BOSS 长图（M7）；小红书口碑（M3）等账号准备好再接入。每个里程碑验收后再推进，推送与发布另行确认。
+
+## 致谢与许可证
+
+[rea](https://github.com/morluto/rea)提供网站技术观察能力与证据组织方法，采用 MIT，`Copyright (c) 2026 morluto`；依赖保留原许可。[学习笔记](docs/rea-study.md)
+
+[abi/screenshot-to-code](https://github.com/abi/screenshot-to-code)提供截图还原与视觉迭代的方法参考，采用 MIT，`Copyright (c) 2023 Abi Raja`。本项目没有复制其实现或提示词，也没有安装其服务。[参考记录](skills/redesign/references/method.md)
+
+本项目代码与原创文档采用 [MIT](LICENSE)；第三方截图及引用按[素材说明](docs/assets/README.md)标明来源。

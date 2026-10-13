@@ -1,0 +1,104 @@
+{
+  "date": "2026-10-13",
+  "scope": "local demos and changed prototypes only; verified isolated Chrome for Testing CDP",
+  "checks": [
+    {
+      "name": "teardown demo 1280×800",
+      "passed": true,
+      "w": 1280,
+      "h": 800
+    },
+    {
+      "name": "redesign demo 1280×800",
+      "passed": true,
+      "w": 1280,
+      "h": 800
+    },
+    {
+      "name": "plain-talk demo 1280×800",
+      "passed": true,
+      "w": 1280,
+      "h": 800
+    },
+    {
+      "name": "competitor-weekly demo 1280×800",
+      "passed": true,
+      "w": 1280,
+      "h": 800
+    },
+    {
+      "name": "README preview four cards visible within first 800px at 1280px width",
+      "passed": true,
+      "bottom": 780,
+      "scope": "local approximate README render, not live GitHub"
+    },
+    {
+      "name": "SSPAI boundary fully visible at 1600",
+      "passed": true,
+      "bottom": 795.1875,
+      "viewport": 1020,
+      "text": "买之前，先确认这两点年付仅包含标记“会员免费”的栏目；单买只解锁当前栏目。价格为 2026-10-13 截图示例；优惠、点数附加项与结算价需在正式购买时确认。"
+    },
+    {
+      "name": "SSPAI expanded explanation/footer fully visible at 1600",
+      "passed": true,
+      "bottom": 967.546875,
+      "viewport": 1020
+    },
+    {
+      "name": "SSPAI free content selection 1600",
+      "passed": true
+    },
+    {
+      "name": "SSPAI detail dialog opens 1600",
+      "passed": true
+    },
+    {
+      "name": "SSPAI reset selection 1600",
+      "passed": true
+    },
+    {
+      "name": "SSPAI boundary fully visible at 390",
+      "passed": true,
+      "bottom": 1183.28125,
+      "viewport": 1450,
+      "text": "买之前，先确认这两点年付仅包含标记“会员免费”的栏目；单买只解锁当前栏目。价格为 2026-10-13 截图示例；优惠、点数附加项与结算价需在正式购买时确认。"
+    },
+    {
+      "name": "SSPAI expanded explanation/footer fully visible at 390",
+      "passed": true,
+      "bottom": 1372.828125,
+      "viewport": 1450
+    },
+    {
+      "name": "SSPAI free content selection 390",
+      "passed": true
+    },
+    {
+      "name": "SSPAI detail dialog opens 390",
+      "passed": true
+    },
+    {
+      "name": "SSPAI reset selection 390",
+      "passed": true
+    },
+    {
+      "name": "IKEA three neutral SVG images loaded",
+      "passed": true
+    },
+    {
+      "name": "IKEA decline privacy still allows room entry",
+      "passed": true
+    },
+    {
+      "name": "IKEA bedroom neutral illustration opens detail",
+      "passed": true
+    },
+    {
+      "name": "IKEA reopen privacy choice",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "externalRequests": []
+}

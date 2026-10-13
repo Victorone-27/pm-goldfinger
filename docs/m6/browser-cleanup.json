@@ -1,0 +1,10 @@
+{
+  "verified": true,
+  "endpoint": "http://127.0.0.1:64479",
+  "pid": 53095,
+  "bundle_id": "com.google.chrome.for.testing",
+  "browser_version": "Chrome/155.0.8059.39",
+  "stopped": true,
+  "listener_closed": true,
+  "profile_deleted": true
+}

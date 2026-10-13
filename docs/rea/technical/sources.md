@@ -73,6 +73,6 @@
 
 - 所有 rea 文件均标记 `redacted_summary_not_original_evidence`；`source_evidence_id` 是来源，不是摘要的内容哈希。筛选后的数组只含相关条目，计数保留原采集口径。原始结果未另作公开保存，无法由摘要重建全部 Evidence。
 - 宿主记录明确标为 `host_cdp_metadata_summary`，没有借用 rea Evidence ID。只保留正常浏览实际出现的必要元数据，去掉查询值、fragment 与会话标识；没有凭据、请求/响应正文、受限文章内容或日常 Chrome 数据。
-- [screenshots.json](screenshots.json)包含 8 张新截图的原 SHA-256、rea 来源 ID 与时间。截图为公开页面原视口，不包括浏览器地址栏和 profile 信息。
+- [screenshots.json](screenshots.json)包含 8 张截图的原始 SHA-256、M6 标注展示版 SHA-256、rea 来源 ID 与时间。M6 增加来源条，必要时遮盖无关署名；rea 来源 ID 仍指向原始采集，不能把展示副本当作原始 Evidence。截图不包括浏览器地址栏和 profile 信息。处理范围见[素材索引](../../assets/screenshot-attribution.json)。
 - 运行环境与清理见 [browser-install.json](browser-install.json)、[isolation-check.json](isolation-check.json)、[browser-cleanup.json](browser-cleanup.json)。Chrome for Testing 官方包为 ad-hoc 签名，`codesign` 应用资源封装验证未通过；原始 ZIP CRC 校验通过，未补签、未修改浏览器安全设置。没有把本地 SHA-256 称作上游发布校验值。
 - [mcp-check.json](mcp-check.json)记录实际配置的 MCP 协议调用，当前 Codex 会话原生工具重连仍未验证。
