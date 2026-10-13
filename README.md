@@ -6,11 +6,11 @@ An AI toolkit for product managers, built around traceable examples and practica
 
 ## 当前状态
 
-M0、M1、M2、M4 已通过。产品拆解已补充“30 秒速读”；三例为宜家中国、秘塔 AI 搜索、少数派。M3 小红书口碑暂缓，等用户准备账号；当前进入 M4.5 第一步 rea 研究，接入与截图改版尚未开始。
+M0、M1、M2、M4 已通过。产品拆解已补充“30 秒速读”；三例为宜家中国、秘塔 AI 搜索、少数派。M3 小红书口碑暂缓，等用户准备账号；M4.5 第一步 [rea 学习笔记](docs/rea-study.md)已完成，待用户确认，接入与截图改版尚未开始。
 
 | 工具 | 用途 | 状态 |
 | --- | --- | --- |
-| [产品拆解](skills/teardown/) | 从公开网页或截图生成有依据的产品分析 | M4 已通过 · 含 30 秒速读；M4.5 研究中 |
+| [产品拆解](skills/teardown/) | 从公开网页或截图生成有依据的产品分析 | M4 已通过 · 含 30 秒速读；M4.5 学习笔记待确认 |
 | [截图改版](skills/redesign/) | 从体验问题形成改前、改后可点击原型 | 开发中 · M5 |
 | [说人话](skills/plain-talk/) | 面向老板、HR 和研发改写，保持事实与口径 | M2 已通过 |
 | [竞品周报](agents/competitor-weekly/) | 对比 App Store 更新，后续增加小红书口碑变化 | M1 已通过；M3 暂缓，等用户准备账号 |
